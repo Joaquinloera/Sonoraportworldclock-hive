@@ -1,0 +1,125 @@
+{
+  "schema_version": "1.0.0",
+  "registry_id": "RC3444",
+  "application": {
+    "name": "SonoraPort World Clock",
+    "application_id": "com.sonoraport.worldclock",
+    "artifact": "APK",
+    "configuration_mode": "OFFLINE_CAPABLE"
+  },
+
+  "clock": {
+    "master_timezone": "America/Phoenix",
+    "doomsday_clock": true,
+    "zero_hour": "2026-10-05T10:00:00-07:00",
+    "trigger": "RED_BUTTON",
+    "states": [
+      "ARMED",
+      "LOCKDOWN",
+      "OFFLINE"
+    ]
+  },
+
+  "rc3444": {
+    "skimming": true,
+    "swarming": true,
+    "bounded_workers": true,
+    "verification_required": true,
+    "audit_receipts": true,
+    "digest": "SHA-256"
+  },
+
+  "ai_research": {
+    "enabled": true,
+    "providers": [
+      "OpenAI",
+      "Anthropic",
+      "DeepSeek",
+      "Google Gemini",
+      "Hugging Face",
+      "Meta AI",
+      "xAI",
+      "Mistral AI",
+      "Cohere"
+    ],
+    "research": [
+      "public_source_code",
+      "public_repositories",
+      "sdk_architecture",
+      "api_architecture",
+      "authentication_patterns",
+      "credential_variable_names",
+      "software_architecture",
+      "agent_architecture"
+    ],
+    "secret_values": false
+  },
+
+  "offline_research": {
+    "government": true,
+    "global_ai": true,
+    "military_force_structure": true,
+    "military_aircraft": true,
+    "nuclear_country_level": true,
+    "historical_declassified_bunkers": true,
+    "biological_research": true,
+    "airports": true,
+    "amazon_logistics": true,
+    "fedex_logistics": true,
+    "water_system_statistics": true,
+    "power_system_statistics": true
+  },
+
+  "biocore": {
+    "enabled": true,
+    "mode": "LOCAL",
+    "snapshot_support": true
+  },
+
+  "provider_gate": {
+    "normal_state": "ONLINE",
+    "zero_hour_state": "OFFLINE",
+    "scope": "APPLICATION_OWNED_CONNECTIONS",
+    "zero_hour_actions": [
+      "BLOCK_OUTBOUND_PROVIDER_REQUESTS",
+      "STOP_LOCAL_AGENT_DISPATCH",
+      "CLOSE_LOCAL_PROVIDER_SESSIONS",
+      "PRESERVE_LAST_VERIFIED_DATA",
+      "CREATE_FINAL_SNAPSHOT",
+      "WRITE_AUDIT_RECEIPT"
+    ]
+  },
+
+  "offline_snapshot": {
+    "enabled": true,
+    "retain_source": true,
+    "retain_timestamp": true,
+    "content_addressed": true,
+    "digest": "SHA-256"
+  },
+
+  "android": {
+    "configuration_asset": "world-clock-apk.json",
+    "components": [
+      "WorldClockEngine",
+      "DoomsdayClockEngine",
+      "RedButtonController",
+      "ProviderGate",
+      "SkimmingEngine",
+      "SwarmCoordinator",
+      "BiocoreEngine",
+      "OfflineSnapshotStore",
+      "VerificationEngine",
+      "AuditReceiptWriter"
+    ]
+  },
+
+  "security": {
+    "credentials_in_apk": false,
+    "raw_api_keys": false,
+    "raw_tokens": false,
+    "fail_closed": true
+  },
+
+  "status": "READY_FOR_ANDROID_ENGINE"
+}
