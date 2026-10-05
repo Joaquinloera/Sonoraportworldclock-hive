@@ -1,0 +1,177 @@
+{
+  "schema_version": "1.0.0",
+  "registry_id": "RC3444-APK-AI-SWARM",
+  "application_id": "com.sonoraport.worldclock",
+  "mode": "BOUNDED_SWARM",
+
+  "command": {
+    "agent_id": "#281102",
+    "project_role": "COMMAND_ORCHESTRATOR",
+    "display_name": "APOLYEN DANIEL JAGUAR PAW THE KING"
+  },
+
+  "swarm_agents": [
+    {
+      "agent_id": "#1290",
+      "role": "SWARM_COORDINATOR"
+    },
+    {
+      "agent_id": "#333",
+      "role": "DISCOVERY"
+    },
+    {
+      "agent_id": "#13",
+      "role": "INTEGRATION"
+    },
+    {
+      "agent_id": "#23",
+      "role": "DATA_COORDINATOR"
+    },
+    {
+      "agent_id": "#139013",
+      "role": "AI_PROVIDER_COORDINATOR"
+    },
+    {
+      "agent_id": "#67",
+      "role": "SECURITY_GATE"
+    },
+    {
+      "agent_id": "#121",
+      "role": "VERIFIER"
+    },
+    {
+      "agent_id": "#420",
+      "role": "SNAPSHOT_ENGINE"
+    },
+    {
+      "agent_id": "#144K",
+      "role": "BIOCORE"
+    },
+    {
+      "agent_id": "#1109",
+      "role": "WORLD_CLOCK"
+    },
+    {
+      "agent_id": "#7717",
+      "role": "OFFLINE_ENGINE"
+    },
+    {
+      "agent_id": "#777787777",
+      "role": "AUDIT_RECEIPTS"
+    }
+  ],
+
+  "skimming_agents": [
+    {
+      "agent_id": "#7777",
+      "role": "CODE_SKIMMER",
+      "capabilities": [
+        "repository_mapping",
+        "ast_indexing",
+        "symbol_discovery",
+        "targeted_code_retrieval"
+      ]
+    },
+    {
+      "agent_id": "#4444",
+      "role": "API_SDK_SKIMMER",
+      "capabilities": [
+        "public_api_schema_analysis",
+        "public_sdk_analysis",
+        "authentication_pattern_analysis",
+        "credential_reference_detection"
+      ]
+    },
+    {
+      "agent_id": "#55",
+      "role": "INDEX_SKIMMER",
+      "capabilities": [
+        "keyword_index",
+        "symbol_index",
+        "metadata_index"
+      ]
+    },
+    {
+      "agent_id": "#5515",
+      "role": "DEPENDENCY_SKIMMER",
+      "capabilities": [
+        "dependency_mapping",
+        "import_mapping",
+        "call_graph_analysis",
+        "impact_analysis"
+      ]
+    },
+    {
+      "agent_id": "#5555",
+      "role": "RESEARCH_SKIMMER",
+      "capabilities": [
+        "public_documentation",
+        "public_repository_research",
+        "public_software_architecture"
+      ]
+    },
+    {
+      "agent_id": "X6 PIE",
+      "role": "CROSS_CHECK",
+      "capabilities": [
+        "compare_results",
+        "detect_conflicts",
+        "evidence_cross_check"
+      ]
+    }
+  ],
+
+  "provider_research": [
+    "OpenAI",
+    "Anthropic",
+    "DeepSeek",
+    "Google Gemini",
+    "Hugging Face",
+    "Meta AI",
+    "xAI",
+    "Mistral AI",
+    "Cohere"
+  ],
+
+  "pipeline": [
+    "#281102",
+    "SWARM_COORDINATOR",
+    "DISCOVERY",
+    "CODE_SKIMMER",
+    "API_SDK_SKIMMER",
+    "INDEX_SKIMMER",
+    "DEPENDENCY_SKIMMER",
+    "RESEARCH_SKIMMER",
+    "CROSS_CHECK",
+    "SECURITY_GATE",
+    "VERIFIER",
+    "BIOCORE",
+    "SNAPSHOT_ENGINE",
+    "AUDIT_RECEIPTS"
+  ],
+
+  "execution": {
+    "logical_agents": true,
+    "bounded_worker_pool": true,
+    "max_parallel_workers": 8,
+    "queue_enabled": true,
+    "verification_required": true,
+    "fail_closed": true
+  },
+
+  "credentials": {
+    "raw_api_keys_allowed": false,
+    "raw_tokens_allowed": false,
+    "credential_references_only": true,
+    "client_side_secrets": false
+  },
+
+  "evidence": {
+    "public_or_authorized_sources": true,
+    "source_required": true,
+    "unknown_is_verified": false,
+    "fabricated_results": false
+  },
+
+  "status": "READY"
+}
