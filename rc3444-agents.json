@@ -1,0 +1,91 @@
+{
+  "schema_version": "1.0.0",
+  "registry_id": "RC3444",
+  "swarm_id": "RC3444-SWARM-003",
+  "mode": "HIGH_SIMULATED_ALERT",
+  "read_only": true,
+  "fail_closed": true,
+
+  "agents": [
+    {
+      "agent_id": "AUTH",
+      "capability": "authentication_metadata",
+      "permissions": ["read"],
+      "workers": 1
+    },
+    {
+      "agent_id": "MODELS",
+      "capability": "model_metadata",
+      "permissions": ["read"],
+      "workers": 1
+    },
+    {
+      "agent_id": "DATASETS",
+      "capability": "dataset_metadata",
+      "permissions": ["read"],
+      "workers": 1
+    },
+    {
+      "agent_id": "SPACES",
+      "capability": "space_metadata",
+      "permissions": ["read"],
+      "workers": 1
+    },
+    {
+      "agent_id": "JOBS",
+      "capability": "job_status",
+      "permissions": ["read"],
+      "workers": 1
+    },
+    {
+      "agent_id": "METADATA",
+      "capability": "artifact_change_detection",
+      "permissions": ["read"],
+      "workers": 1
+    },
+    {
+      "agent_id": "VERIFIER",
+      "capability": "evidence_verification",
+      "permissions": ["read"],
+      "workers": 1
+    },
+    {
+      "agent_id": "AUDITOR",
+      "capability": "audit_receipts",
+      "permissions": ["append_receipt"],
+      "workers": 1
+    }
+  ],
+
+  "blocked_capabilities": [
+    "create_repository",
+    "modify_repository",
+    "delete_repository",
+    "run_job",
+    "cancel_job",
+    "schedule_job",
+    "modify_scheduled_job",
+    "read_raw_secret",
+    "export_credentials"
+  ],
+
+  "pipeline": [
+    "AUTH",
+    "MODELS",
+    "DATASETS",
+    "SPACES",
+    "JOBS",
+    "METADATA",
+    "VERIFIER",
+    "AUDITOR"
+  ],
+
+  "verification": {
+    "require_evidence": true,
+    "unknown_is_not_verified": true,
+    "not_connected_is_not_active": true,
+    "never_manufacture_runtime_events": true
+  },
+
+  "status": "READY"
+}
