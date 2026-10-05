@@ -1,0 +1,129 @@
+{
+  "schema_version": "1.0.0",
+  "registry_id": "RC3444",
+  "name": "RC3444 Hugging Face Watch",
+  "mode": "HIGH_SIMULATED_ALERT",
+  "owner": "Joaquinloera13",
+
+  "policy": {
+    "read_only": true,
+    "fail_closed": true,
+    "never_expose_secrets": true,
+    "fabricated_events_forbidden": true,
+    "bounded_concurrency": true,
+    "max_workers": 8
+  },
+
+  "providers": {
+    "hugging_face": {
+      "enabled": true,
+      "credential_source": "SERVER_SIDE",
+      "credential_value": "NEVER_STORE_HERE",
+      "allowed_operations": [
+        "whoami",
+        "repo_details",
+        "model_lookup",
+        "dataset_lookup",
+        "space_lookup",
+        "jobs_ps",
+        "scheduled_jobs_ps"
+      ],
+      "blocked_operations": [
+        "create_repo",
+        "update_repo",
+        "delete_repo",
+        "run_job",
+        "cancel_job",
+        "schedule_job",
+        "delete_scheduled_job",
+        "suspend_scheduled_job",
+        "resume_scheduled_job"
+      ]
+    }
+  },
+
+  "registered_callsigns": [
+    "Uriel",
+    "Raphael",
+    "Raguel",
+    "Michael",
+    "Sariel",
+    "Saraqael",
+    "Gabriel",
+    "Remiel",
+    "Leviathan",
+    "Behemoth",
+    "Ziz"
+  ],
+
+  "watch": {
+    "models": true,
+    "datasets": true,
+    "spaces": true,
+    "repositories": true,
+    "active_jobs": true,
+    "scheduled_jobs": true,
+    "authentication_metadata": true,
+    "artifact_metadata": true
+  },
+
+  "swarm": {
+    "pipeline": [
+      "DISCOVER",
+      "SKIM",
+      "FILTER",
+      "RETRIEVE",
+      "VERIFY",
+      "COMPARE",
+      "AUDIT"
+    ],
+    "workers": {
+      "AUTH": 1,
+      "MODELS": 1,
+      "DATASETS": 1,
+      "SPACES": 1,
+      "JOBS": 1,
+      "METADATA": 1,
+      "VERIFIER": 1,
+      "AUDITOR": 1
+    }
+  },
+
+  "delta_engine": {
+    "notify_only_on_change": true,
+    "high_priority": [
+      "CALLSIGN_RESOLVED",
+      "NEW_MODEL",
+      "NEW_DATASET",
+      "NEW_SPACE",
+      "NEW_REPOSITORY",
+      "JOB_STARTED",
+      "SCHEDULED_JOB_APPEARED",
+      "MATERIAL_METADATA_CHANGE",
+      "AUTH_METADATA_CHANGE"
+    ],
+    "unknown_is_not_verified": true,
+    "not_connected_is_not_active": true
+  },
+
+  "audit_receipt": {
+    "required_fields": [
+      "receipt_id",
+      "timestamp",
+      "provider",
+      "agent_id",
+      "capability",
+      "request_digest",
+      "result_digest",
+      "previous_digest",
+      "status"
+    ],
+    "append_only": true
+  },
+
+  "status": {
+    "configuration": "READY",
+    "runtime_claim": "NOT_ASSERTED",
+    "secrets_embedded": false
+  }
+}
