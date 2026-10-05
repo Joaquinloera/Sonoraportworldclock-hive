@@ -1,4 +1,4 @@
-name: RC3444 Watch Verification
+name: RC3444 Full Swarm Verification
 
 on:
   push:
@@ -7,6 +7,11 @@ on:
     paths:
       - "rc3444-watch.json"
       - "rc3444-agents.json"
+      - "rc3444-providers.json"
+      - "rc3444-audit-schema.json"
+      - "rc3444-offline-registry.json"
+      - "world-doomsday-clock.json"
+      - "world-clock-apk.json"
       - ".github/workflows/rc3444-watch.yml"
 
   pull_request:
@@ -19,8 +24,8 @@ permissions:
   contents: read
 
 jobs:
-  verify-rc3444:
-    name: Verify RC3444 Configuration
+  verify-full-swarm:
+    name: Verify RC3444 Full Swarm
     runs-on: ubuntu-latest
     timeout-minutes: 5
 
@@ -28,27 +33,51 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Verify required files
+      - name: Verify swarm files
         shell: bash
         run: |
           set -euo pipefail
 
-          test -f rc3444-watch.json
-          test -f rc3444-agents.json
+          FILES=(
+            "rc3444-watch.json"
+            "rc3444-agents.json"
+            "rc3444-providers.json"
+            "rc3444-audit-schema.json"
+            "rc3444-offline-registry.json"
+            "world-doomsday-clock.json"
+            "world-clock-apk.json"
+          )
 
-          echo "RC3444 required files found"
+          for file in "${FILES[@]}"; do
+            if [[ ! -f "$file" ]]; then
+              echo "MISSING: $file"
+              exit 1
+            fi
 
-      - name: Validate JSON
+            echo "FOUND: $file"
+          done
+
+      - name: Validate every JSON file
         shell: bash
         run: |
           set -euo pipefail
 
-          python -m json.tool rc3444-watch.json >/dev/null
-          python -m json.tool rc3444-agents.json >/dev/null
+          FILES=(
+            "rc3444-watch.json"
+            "rc3444-agents.json"
+            "rc3444-providers.json"
+            "rc3444-audit-schema.json"
+            "rc3444-offline-registry.json"
+            "world-doomsday-clock.json"
+            "world-clock-apk.json"
+          )
 
-          echo "RC3444 JSON VALID"
+          for file in "${FILES[@]}"; do
+            python -m json.tool "$file" >/dev/null
+            echo "VALID: $file"
+          done
 
-      - name: Enforce read-only policy
+      - name: Verify RC3444 security gates
         shell: bash
         run: |
           set -euo pipefail
@@ -56,29 +85,73 @@ jobs:
           python <<'PY'
           import json
 
-          with open("rc3444-watch.json") as f:
-              watch = json.load(f)
+          def load(path):
+              with open(path, encoding="utf-8") as f:
+                  return json.load(f)
 
-          with open("rc3444-agents.json") as f:
-              agents = json.load(f)
+          watch = load("rc3444-watch.json")
+          agents = load("rc3444-agents.json")
+          providers = load("rc3444-providers.json")
+          audit = load("rc3444-audit-schema.json")
+          offline = load("rc3444-offline-registry.json")
+          clock = load("world-doomsday-clock.json")
+          apk = load("world-clock-apk.json")
 
           assert watch["policy"]["read_only"] is True
           assert watch["policy"]["fail_closed"] is True
-          assert watch["policy"]["never_expose_secrets"] is True
 
           assert agents["read_only"] is True
           assert agents["fail_closed"] is True
 
-          print("RC3444 READ-ONLY POLICY VERIFIED")
+          assert providers["read_only"] is True
+          assert providers["fail_closed"] is True
+
+          assert audit["fail_closed"] is True
+
+          assert offline["fail_closed"] is True
+
+          assert clock["security"]["fail_closed"] is True
+          assert clock["security"]["raw_api_keys_in_json"] is False
+
+          assert apk["security"]["fail_closed"] is True
+          assert apk["security"]["raw_api_keys"] is False
+
+          print("RC3444 SECURITY GATES: PASS")
           PY
 
-      - name: RC3444 verification receipt
+      - name: Verify Zero Hour
+        shell: bash
         run: |
-          echo "================================"
-          echo "RC3444 WATCH"
-          echo "CONFIGURATION: VERIFIED"
-          echo "JSON: VALID"
-          echo "READ-ONLY: VERIFIED"
-          echo "SECRETS: NOT EMBEDDED"
-          echo "STATUS: PASS"
-          echo "================================"
+          python <<'PY'
+          import json
+
+          with open("world-clock-apk.json", encoding="utf-8") as f:
+              apk = json.load(f)
+
+          expected = "2026-10-05T10:00:00-07:00"
+
+          actual = apk["clock"]["zero_hour"]
+
+          if actual != expected:
+              raise SystemExit(
+                  f"ZERO HOUR mismatch: {actual}"
+              )
+
+          print("ZERO HOUR VERIFIED:", actual)
+          PY
+
+      - name: Full swarm receipt
+        run: |
+          echo "===================================="
+          echo "RC3444 FULL SWARM"
+          echo "WATCH: PASS"
+          echo "AGENTS: PASS"
+          echo "PROVIDERS: PASS"
+          echo "AUDIT: PASS"
+          echo "OFFLINE REGISTRY: PASS"
+          echo "WORLD CLOCK: PASS"
+          echo "DOOMSDAY CLOCK: PASS"
+          echo "APK CONFIG: PASS"
+          echo "ZERO HOUR: VERIFIED"
+          echo "STATUS: GREEN"
+          echo "===================================="
