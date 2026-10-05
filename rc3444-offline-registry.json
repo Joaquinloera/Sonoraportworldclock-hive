@@ -1,0 +1,173 @@
+{
+  "schema_version": "1.0.0",
+  "registry_id": "RC3444",
+  "registry_type": "OFFLINE_RESEARCH_DATASET",
+  "mode": "SKIMMING_SWARM",
+  "fail_closed": true,
+
+  "network_policy": {
+    "runtime_mode": "OFFLINE_SNAPSHOT",
+    "live_control": false,
+    "remote_commands": false,
+    "infrastructure_control": false,
+    "weapon_control": false
+  },
+
+  "datasets": [
+    {
+      "dataset_id": "GLOBAL_AI",
+      "category": "AI_COMPANIES_WORLDWIDE",
+      "scope": [
+        "public_companies",
+        "public_documentation",
+        "public_repositories",
+        "public_sdks",
+        "public_api_schemas",
+        "authentication_patterns",
+        "software_architecture"
+      ]
+    },
+    {
+      "dataset_id": "GOVERNMENT",
+      "category": "PUBLIC_GOVERNMENT",
+      "scope": [
+        "public_agencies",
+        "public_programs",
+        "public_documents",
+        "public_datasets",
+        "public_software"
+      ]
+    },
+    {
+      "dataset_id": "DEFENSE",
+      "category": "MILITARY_PUBLIC_INFORMATION",
+      "scope": [
+        "countries",
+        "service_branches",
+        "public_force_structure",
+        "public_aircraft_inventories",
+        "aircraft_types",
+        "historical_public_facilities"
+      ]
+    },
+    {
+      "dataset_id": "NUCLEAR",
+      "category": "NUCLEAR_FORCES",
+      "exclude": [
+        "Iran",
+        "North Korea"
+      ],
+      "scope": [
+        "country_level_inventory",
+        "weapon_classes",
+        "historical_inventory",
+        "public_policy",
+        "public_treaty_information"
+      ],
+      "precise_weapon_locations": false,
+      "targeting_information": false
+    },
+    {
+      "dataset_id": "BUNKERS",
+      "category": "BUNKER_RESEARCH",
+      "scope": [
+        "historical_public_sites",
+        "declassified_information",
+        "public_civil_defense_information"
+      ],
+      "sensitive_current_locations": false
+    },
+    {
+      "dataset_id": "BIO",
+      "category": "BIOLOGICAL_RESEARCH",
+      "scope": [
+        "public_health",
+        "public_research_institutions",
+        "biosafety_standards",
+        "public_research_programs"
+      ]
+    },
+    {
+      "dataset_id": "BIOCORE",
+      "category": "INTERNAL_BIOCORE",
+      "scope": [
+        "authorized_internal_metadata",
+        "local_simulation",
+        "audit_receipts"
+      ]
+    },
+    {
+      "dataset_id": "LOGISTICS",
+      "category": "GLOBAL_LOGISTICS",
+      "scope": [
+        "Amazon",
+        "FedEx",
+        "public_distribution_network_information",
+        "public_supply_chain_information"
+      ]
+    },
+    {
+      "dataset_id": "AIRPORTS",
+      "category": "AIRPORTS",
+      "scope": [
+        "public_airport_directory",
+        "airport_codes",
+        "public_capacity_statistics",
+        "public_transportation_data"
+      ]
+    },
+    {
+      "dataset_id": "WATER",
+      "category": "WATER_INFRASTRUCTURE",
+      "scope": [
+        "public_utility_statistics",
+        "public_water_system_information",
+        "historical_public_information"
+      ],
+      "operational_control": false
+    },
+    {
+      "dataset_id": "POWER",
+      "category": "POWER_INFRASTRUCTURE",
+      "scope": [
+        "public_generation_statistics",
+        "energy_mix",
+        "public_grid_statistics",
+        "historical_public_information"
+      ],
+      "operational_control": false
+    }
+  ],
+
+  "skimming_pipeline": [
+    "DISCOVER",
+    "CLASSIFY",
+    "MAP",
+    "INDEX",
+    "FILTER",
+    "RETRIEVE",
+    "CROSS_CHECK",
+    "VERIFY",
+    "SNAPSHOT",
+    "HASH",
+    "AUDIT"
+  ],
+
+  "offline_storage": {
+    "format": "JSON",
+    "content_addressed": true,
+    "digest_algorithm": "SHA-256",
+    "retain_source_attribution": true,
+    "retain_retrieval_timestamp": true
+  },
+
+  "verification": {
+    "public_or_authorized_sources_only": true,
+    "source_required": true,
+    "unknown_is_verified": false,
+    "fabricated_data_allowed": false,
+    "simulation_must_be_labeled": true
+  },
+
+  "status": "READY"
+}
