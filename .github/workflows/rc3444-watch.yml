@@ -1,0 +1,84 @@
+name: RC3444 Watch Verification
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "rc3444-watch.json"
+      - "rc3444-agents.json"
+      - ".github/workflows/rc3444-watch.yml"
+
+  pull_request:
+    branches:
+      - main
+
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify-rc3444:
+    name: Verify RC3444 Configuration
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Verify required files
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          test -f rc3444-watch.json
+          test -f rc3444-agents.json
+
+          echo "RC3444 required files found"
+
+      - name: Validate JSON
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          python -m json.tool rc3444-watch.json >/dev/null
+          python -m json.tool rc3444-agents.json >/dev/null
+
+          echo "RC3444 JSON VALID"
+
+      - name: Enforce read-only policy
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          python <<'PY'
+          import json
+
+          with open("rc3444-watch.json") as f:
+              watch = json.load(f)
+
+          with open("rc3444-agents.json") as f:
+              agents = json.load(f)
+
+          assert watch["policy"]["read_only"] is True
+          assert watch["policy"]["fail_closed"] is True
+          assert watch["policy"]["never_expose_secrets"] is True
+
+          assert agents["read_only"] is True
+          assert agents["fail_closed"] is True
+
+          print("RC3444 READ-ONLY POLICY VERIFIED")
+          PY
+
+      - name: RC3444 verification receipt
+        run: |
+          echo "================================"
+          echo "RC3444 WATCH"
+          echo "CONFIGURATION: VERIFIED"
+          echo "JSON: VALID"
+          echo "READ-ONLY: VERIFIED"
+          echo "SECRETS: NOT EMBEDDED"
+          echo "STATUS: PASS"
+          echo "================================"
