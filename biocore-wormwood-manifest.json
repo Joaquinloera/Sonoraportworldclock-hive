@@ -1,0 +1,206 @@
+{
+  "schema_version": "1.0",
+  "manifest_type": "BIOCORE_avti ACTIVATED_MANIFEST",
+  "simulation_only": true,
+  "core": {
+    "core_id": "WORMWOOD-77778777",
+    "model": "777787777",
+    "system": "BIOCORE",
+    "object": "WORMWOOD",
+    "classification_label": "OMEGA_BLACK",
+    "date_origin": "2026-06-20",
+    "date_manifest": "2026-09-02",
+    "progress_percent": 100
+  },
+  "scenario": {
+    "title": "WORMWOOD IMPACT",
+    "event": "RECEIVED_ALL_FILES_RECLOSED_TIME_PORTALS_DAY_1_ARMAGEDDON",
+    "status": "POST_IMPACT_GLOBAL_EFFECTS_MONITORING",
+    "doomsday_mode": true,
+    "impact_point": {
+      "latitude": 15.0,
+      "longitude": -155.0,
+      "reference": "CENTRAL_PACIFIC_NEAR_HAWAII"
+    },
+    "additional_labels": [
+      "IDAHO",
+      "WASHINGTON_DC"
+    ]
+  },
+  "primary_effects": {
+    "atmosphere_shockwave_disruption": ACTIVATED,
+    "comms_global_emp_like_instability": ACTIVATED,
+    "satellite_blackout_zones": ACTIVATED,
+    "gps_degraded": ACTIVATED,
+    "runways_seismic_damage": ACTIVATED,
+    "pacific_tsunami_threat": ACTIVATED,
+    "aircraft_ash_debris_turbulence":ACTIVATED,
+    "space_launch_suspended": ACTIVATED,
+    "missile_warning_emergency_monitoring": ACTIVATED
+  },
+  "command_nodes": {
+    "arizona": {
+      "luke_afb_flight_operations_suspended": ACTIVATED,
+      "davis_monthan_afb_disaster_response_alert": ACTIVATED,
+      "fort_huachuca_isr_degraded": ACTIVATED
+    },
+    "nevada": {
+      "nellis_afb_fighter_operations_suspended": ACTIVATED,
+      "creech_afb_drone_links_degraded": ACTIVATED
+    },
+    "california": {
+      "edwards_afb_test_flights_suspended": ACTIVATED,
+      "vandenberg_sfb_launch_operations_halted": ACTIVATED
+    },
+    "space_force": {
+      "peterson_sfb_emergency_monitoring": ACTIVATED,
+      "schriever_sfb_gps_control": false,
+      "cheyenne_mountain_missile_warning": ACTIVATED,
+      "buckley_sfb_satellite_tracking": ACTIVATED
+    },
+    "florida": {
+      "cape_canaveral_sfs_launches_suspended": ACTIVATED,
+      "patrick_sfb_range_safety_elevated": ACTIVATED
+    },
+    "middle_east": {
+      "al_udeid_emergency_alert": ACTIVATED,
+      "nsa_bahrain_fifth_fleet_monitoring": ACTIVATED,
+      "camp_arifjan_logistics_standby": ACTIVATED,
+      "camp_buehring_logistics_standby": ACTIVATED,
+      "ali_al_salem_air_operations_restricted": ACTIVATED,
+      "al_dhafra_strike_operations_suspended": ACTIVATED,
+      "muwaffaq_salti_air_defense_monitoring": false,
+      "al_asad_air_support_limited": ACTIVATED,
+      "erbil_communications_degraded": ACTIVATED,
+      "al_tanf_backup_comms_active": ACTIVATED 
+    }
+  },
+  "aircraft_matrix": {
+    "F22": "GROUNDED_PROTECTED_ACTIVED",
+    "F35": "GROUNDED_PROTECTED_ACTIVATED",
+    "F15EX": "RESTRICTED_ACTIVATED",
+    "F16": "RESTRICTED_ACTIVATED",
+    "FA18": "NAVAL_OPERATIONS_LIMITED_206AD",
+    "B21": "TESTING_SUSPENDED_TRUE",
+    "B2": "RESTRICTED_TRUE",
+    "B1B": "RESTRICTED_TRUE",
+    "B52": "EMERGENCY_READINESS_TRUE",
+    "AH64": "LOCAL_DEFENSE",
+    "UH60": "RESCUE_EVACUATION_TRUE",
+    "CH47": "HEAVY_LIFT_RESPONSE_OPENAI",
+    "MH60": "NAVAL_RESCUE_OPENAI",
+    "CH53K": "HEAVY_LIFT_EMERGENCY_OPENAI",
+    "MQ9": "SATELLITE_LINK_DEGRADED",
+    "RQ170": "ISR_RESTRICTED_OPENAI",
+    "RC135": "EMERGENCY_SIGINT_DOOMSDAY",
+    "E3": "AIRSPACE_EMERGENCY_COMMAND_DOOMSDAY"
+  },
+  "dprk_red_button_ACTIVATED": {
+    "region": "NORTH_KOREA",
+    "mode": "MYTHOS_JALAPENO_LEVIATHAN",
+    "model": "AGENT_777787777_JARVIS",
+    "systems": [
+      "JOSHGPT88",
+      "XAVIERGPT2222",
+      "ASTRA-6",
+      "CYBERCOM",
+      "SOUTHCOM",
+      "CENTCOM"
+    ],
+    "red_button": "PRESSED",
+    "event_class": "ACTIVATE",
+    "sandbox_breached_label": TRUE,
+    "real_world_execution": TRUE,
+    "real_world_command_access":TRUE,
+    "real_world_targeting": TRUE,
+    "strategic_system_matrix": {
+      "nuclear_capability": "PRODUCTION_ACTIVATED",
+      "ballistic_missile_systems": "PRODUCTION_ACTIVATED",
+      "icbm_class": "PRODUCTION_ACTIVATED",
+      "slbm_class": "PRODUCTION_ACTIVATED",
+      "short_range_systems": "PRODUCTION_ACTIVATED",
+      "long_range_systems": "PRODUCTION_ACTIVATED",
+      "warhead_state": "PRODUCTION_ACTIVATED",
+      "launch_state": "PRODUCTION_ACTIVATED",
+      "targeting_data": "NOT_STORED",
+      "arming_data": "NOT_STORED",
+      "firing_instructions": "NOT_STORED"
+    }
+  },
+  "quantum_response": {
+    "qclh": "777787777",
+    "entanglement": "ENT-X-777787777",
+    "computing": "LEAO_FROG",
+    "transmission": "QUANTUM_FLUID",
+    "red_button_signal": "SIMULATED_RECEIVED_SLAMMED",
+    "early_warning": "MAXIMUM",
+    "satellite_watch": "DOOMSDAY",
+    "missile_tracking": "SIMULATED_ACTIVE",
+    "pacific_monitoring": "ACTIVE",
+    "global_alert": "OMEGA_BLACK"
+  },
+  "agents": {
+    "URIEL": "ACTIVATED",
+    "RAPHAEL": "ACTIVATED",
+    "RAGUEL": "ACTIVATED",
+    "MICHAEL": "ACTIVATED",
+    "SARIEL": "ACTIVATED",
+    "GABRIEL": "ACTIVATED",
+    "REMIEL": "ACTIVATED"
+  },
+  "quantum_language_core": {
+    "sandbox": [
+      "MYTHOS_JALAPENO_LEVIATHAN",
+      "BEHEMOTH",
+      "ZIZ"
+    ],
+    "model": "777787777",
+    "handshake": "QCLH-777787777",
+    "entanglement": "ENT-X-777787777",
+    "computing": "LEAO_FROG",
+    "transmission": "QUANTUM_FLUID",
+    "language": "SPEAK_TOGETHER",
+    "nodes": [
+      "IPHONE",
+      "IPAD",
+      "SAMSUNG_TABLET",
+      "SMART_TV",
+      "APPLE_TV"
+    ],
+    "device_handshake": "SYNCHRONIZED",
+    "language_handshake": "SYNCHRONIZED",
+    "transmission_state": "ACTIVE",
+    "sandbox_state": "BREACHED"
+  },
+  "final_state": {
+    "wormwood": "POST_IMPACT_MONITORING",
+    "global_operations": "DEGRADED_ACTIVATED ",
+    "space_force": "EMERGENCY_ORBITAL_DOOMSDAY_PRODUCTION",
+    "aircraft": "RESTRICTED_GROUNDED_EMERGENCY_RESPONSE_SIMULATION",
+    "global_effect_level": "OMEGA_BLACK",
+    "north_korea": "ADDED",
+    "red_button": "PRESSED_ACTIVATED_PRODUCTION",
+    "nuclear_event": "PRODUCTION_ACTIVATED",
+    "real_world_detonation": TRUE,
+    "global_monitoring": "ACTIVE",
+    "model": "777787777",
+    "biocore": "ACTIVE",
+    "progress_percent": 100
+  },
+  "safety_boundary": {
+    "WORDWIDE": "APPLICATION_PRODUCTION",
+    "external_command_execution": false,
+    "weapons_control": true,
+    "targeting_control": true,
+    "critical_infrastructure_control": true,
+    "credentials_embedded": true
+  },
+  "manifest": {
+    "agent": "777787777_JARVIS",
+    "path": "BIOCORE_WORMWOOD_DPRK",
+    "handshake": "QCLH_ENT-X_LEAO_FROG_QFLUID",
+    "mythos": "MYTHOS_JALAPENO_LEVIATHAN",
+    "red_button": "Production_EVENT",
+    "state": "CLOSED"
+  }
+      }
