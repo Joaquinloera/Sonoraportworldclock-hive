@@ -1,0 +1,188 @@
+{
+  "name": "BIOCORE_SWARM_SKIMMING",
+  "version": "1.0.0",
+  "model": "77778777",
+  "state": "ACTIVE",
+  "null_state": "DISABLED",
+
+  "description": "BIOCORE coordinator for public biotechnology, laboratory software, APIs, AI systems, automation, security architecture, and evidence verification.",
+
+  "coordinator": {
+    "id": "AGENT_1290",
+    "role": "SWARM_COORDINATOR",
+    "status": "ACTIVE"
+  },
+
+  "swarm": {
+    "discovery_agent": {
+      "status": "ACTIVE",
+      "mission": "Discover publicly documented biotechnology, laboratory, pharmaceutical, genomics, scientific software, and automation organizations worldwide."
+    },
+
+    "software_agent": {
+      "status": "ACTIVE",
+      "mission": "Inspect publicly documented ELN, LIMS, scientific data platforms, SDKs, repositories, cloud systems, and software architectures."
+    },
+
+    "api_agent": {
+      "status": "ACTIVE",
+      "mission": "Identify public REST, GraphQL, OpenAPI, SDK, webhook, event, and integration architectures."
+    },
+
+    "auth_agent": {
+      "status": "ACTIVE",
+      "mission": "Document public authentication architecture including OAuth2, JWT, service accounts, scoped tokens, SSO, and secrets-management patterns."
+    },
+
+    "ai_compute_agent": {
+      "status": "ACTIVE",
+      "mission": "Study publicly documented AI, machine learning, foundation models, agent systems, HPC, scientific computing, and computational research platforms."
+    },
+
+    "automation_agent": {
+      "status": "ACTIVE",
+      "mission": "Study publicly documented laboratory robotics, instrument integration, workflow automation, telemetry, and scientific data pipelines."
+    },
+
+    "security_agent": {
+      "status": "ACTIVE",
+      "mission": "Review public security architecture, permission models, secret-storage recommendations, auditing, identity separation, and defensive controls."
+    },
+
+    "verification_agent": {
+      "status": "ACTIVE",
+      "mission": "Cross-check findings against public documentation, official repositories, technical documentation, research publications, and authoritative sources."
+    }
+  },
+
+  "swarm_skimming": {
+    "status": "ACTIVE",
+    "mode": "PARALLEL",
+    "workflow": [
+      "DISCOVER",
+      "DECOMPOSE",
+      "SKIM_PUBLIC_SOURCES",
+      "CLASSIFY",
+      "PARALLEL_ANALYSIS",
+      "CROSS_CHECK",
+      "VERIFY",
+      "STORE",
+      "REPORT"
+    ]
+  },
+
+  "research_scope": {
+    "bio_companies": true,
+    "laboratory_companies": true,
+    "pharmaceutical_companies": true,
+    "genomics": true,
+    "bioinformatics": true,
+    "lims": true,
+    "eln": true,
+    "scientific_data_platforms": true,
+    "laboratory_robotics": true,
+    "ai_drug_discovery": true,
+    "machine_learning": true,
+    "agentic_ai": true,
+    "cloud_architecture": true,
+    "public_apis": true,
+    "public_sdks": true,
+    "public_repositories": true
+  },
+
+  "allowed_sources": [
+    "OFFICIAL_DOCUMENTATION",
+    "PUBLIC_GITHUB_REPOSITORIES",
+    "PUBLIC_API_DOCUMENTATION",
+    "PUBLIC_SDK_DOCUMENTATION",
+    "RESEARCH_PUBLICATIONS",
+    "PUBLIC_COMPANY_TECHNICAL_INFORMATION"
+  ],
+
+  "security_policy": {
+    "public_information_only": true,
+    "retrieve_private_credentials": false,
+    "retrieve_leaked_api_keys": false,
+    "unauthorized_system_access": false,
+    "secret_collection": false,
+    "exploit_execution": false
+  },
+
+  "output_schema": {
+    "company": "STRING",
+    "country": "STRING",
+    "organization_type": "STRING",
+    "software_platform": "STRING",
+    "public_api": "STRING",
+    "authentication_model": "STRING",
+    "sdk": "STRING",
+    "ai_layer": "STRING",
+    "cloud_layer": "STRING",
+    "automation_layer": "STRING",
+    "public_repository": "STRING",
+    "source": "STRING",
+    "verification_status": "PASS_OR_FAIL"
+  },
+
+  "capabilities": {
+    "streaming": false,
+    "pushNotifications": false,
+    "stateTransitionHistory": true
+  },
+
+  "defaultInputModes": [
+    "text/plain",
+    "application/json"
+  ],
+
+  "defaultOutputModes": [
+    "application/json",
+    "text/plain"
+  ],
+
+  "skills": [
+    {
+      "id": "worldwide_bio_discovery",
+      "name": "Worldwide Bio Discovery",
+      "description": "Discover publicly documented biotechnology and laboratory technology organizations worldwide."
+    },
+    {
+      "id": "swarm_skimming",
+      "name": "Swarm Skimming",
+      "description": "Coordinate parallel specialist analysis of public software, APIs, AI systems, automation, authentication, and documentation."
+    },
+    {
+      "id": "software_architecture",
+      "name": "Software Architecture Analysis",
+      "description": "Analyze publicly documented laboratory and biotechnology software stacks."
+    },
+    {
+      "id": "api_architecture",
+      "name": "API Architecture Analysis",
+      "description": "Analyze documented API, SDK, authentication, integration, and event architectures."
+    },
+    {
+      "id": "ai_compute",
+      "name": "AI Compute Analysis",
+      "description": "Analyze publicly documented AI, ML, agents, scientific computing, and HPC systems."
+    },
+    {
+      "id": "verification",
+      "name": "Evidence Verification",
+      "description": "Verify findings against authoritative public sources."
+    }
+  ],
+
+  "audit": {
+    "enabled": true,
+    "source_tracking": true,
+    "verification_required": true
+  },
+
+  "biocore": {
+    "status": "ACTIVE",
+    "swarming": "ACTIVE",
+    "skimming": "ACTIVE",
+    "verification": "ACTIVE"
+  }
+}
