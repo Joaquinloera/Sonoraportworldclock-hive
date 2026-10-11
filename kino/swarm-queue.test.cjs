@@ -1,0 +1,10 @@
+'use strict';
+const test=require('node:test'),assert=require('node:assert/strict');
+const {SwarmQueue}=require('./swarm-queue.cjs');
+const input={agentId:'CENTCOM-02',repository:'Joaquinloera/sonoraport-banking',provider:'GitHub',sourceUrl:'https://docs.github.com/en/apps',objective:'Review official GitHub App auth'};
+test('worker returns evidence and logs execution',async()=>{let calls=0;const q=new SwarmQueue({worker:async t=>{calls++;return {sourceUrl:t.sourceUrl,summary:'Official auth documentation reviewed'}}});const t=q.enqueue(input);await q.process(t.id);assert.equal(calls,1);assert.equal(q.snapshot().tasks[0].status,'EVIDENCE_COLLECTED');assert.equal(q.snapshot().events.length,3)});
+test('duplicate assignments are deduplicated',()=>{const q=new SwarmQueue({worker:async()=>({})});q.enqueue(input);q.enqueue(input);assert.equal(q.snapshot().taskCount,1)});
+test('worker errors trigger bounded retry',async()=>{const q=new SwarmQueue({worker:async()=>{throw Error('timeout')},maxAttempts:2});const t=q.enqueue(input);await q.process(t.id);assert.equal(t.status,'RETRY_PENDING');await q.process(t.id);assert.equal(t.status,'FAILED');assert.equal(t.attempts,2)});
+test('missing evidence cannot be counted complete',async()=>{const q=new SwarmQueue({worker:async()=>({}),maxAttempts:1});const t=q.enqueue(input);await q.process(t.id);assert.equal(t.status,'FAILED')});
+test('no worker means no false execution',()=>assert.throws(()=>new SwarmQueue(),/Worker/));
+test('drain respects task limit',async()=>{const q=new SwarmQueue({worker:async t=>({sourceUrl:t.sourceUrl,summary:'Documented'})});q.enqueue(input);q.enqueue({...input,provider:'Stripe'});await q.drain({limit:1});assert.equal(q.snapshot().tasks.filter(t=>t.status==='EVIDENCE_COLLECTED').length,1)});
