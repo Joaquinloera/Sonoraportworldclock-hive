@@ -1,0 +1,12 @@
+'use strict';
+const test=require('node:test'),assert=require('node:assert/strict');
+const {roster,queueAssignment,attachResearch}=require('./agent-orchestrator.cjs');
+const input={agentId:'CENTCOM-02',repository:'Joaquinloera/sonoraport-banking',provider:'GitHub',sourceUrl:'https://docs.github.com/en/apps',objective:'Extract installation token requirements'};
+test('30 unique agent profiles',()=>{const r=roster();assert.equal(r.length,30);assert.equal(new Set(r.map(x=>x.id)).size,30);assert.equal(r.filter(x=>x.division==='CYBERCOM').length,10);});
+test('agents not falsely marked running',()=>assert.ok(roster().every(a=>a.status==='PROFILE_ONLY'&&a.runtime==='NOT_CONNECTED')));
+test('assignments queued not executed',()=>{const t=queueAssignment(input);assert.equal(t.status,'QUEUED_NOT_EXECUTED');assert.equal(t.execution,'NOT_STARTED')});
+test('stable deduplication IDs',()=>assert.equal(queueAssignment(input).id,queueAssignment(input).id));
+test('rejects unauthorized repositories',()=>assert.throws(()=>queueAssignment({...input,repository:'other/repo'}),/Unauthorized/));
+test('rejects unrecognized agents',()=>assert.throws(()=>queueAssignment({...input,agentId:'CENTCOM-99'}),/Unknown/));
+test('requires HTTPS source',()=>assert.throws(()=>queueAssignment({...input,sourceUrl:'http://example.com'}),/HTTPS/));
+test('attaches evidence without claiming worker execution',()=>{const r=attachResearch(queueAssignment(input),{sourceUrl:input.sourceUrl,summary:'Official docs identify installation tokens'});assert.equal(r.status,'EVIDENCE_COLLECTED');assert.equal(r.execution,'NOT_STARTED')});
