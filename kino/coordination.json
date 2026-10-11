@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "operation": "KINO-281102",
+  "repository": "Joaquinloera/Sonoraportworldclock-hive",
+  "role": "Cross-project task and schedule coordination.",
+  "coordination": {
+    "researchRepository": "Joaquinloera/Worldsanbox13",
+    "hiveRepository": "Joaquinloera/Sonoraportworldclock-hive",
+    "authorizedRepositories": [
+      "Joaquinloera/Worldsanbox13",
+      "Joaquinloera/Sonoraportworldclock-hive",
+      "Joaquinloera/sonoraport-banking",
+      "Joaquinloera/matcha-manita",
+      "Joaquinloera/Kayleengpt13",
+      "Joaquinloera/Josh"
+    ],
+    "workflow": [
+      "RECOVER",
+      "AI AGENTS",
+      "SWARM",
+      "SKIM",
+      "CROSS-CHECK",
+      "CODE",
+      "TEST",
+      "SAVE",
+      "VERIFY"
+    ],
+    "evidenceRequired": true,
+    "simulationMustBeLabeled": true
+  },
+  "integration": {
+    "state": "NOT_CONNECTED",
+    "credentials": "server-side only; never commit secrets",
+    "agentExecution": "NOT_VERIFIED",
+    "productionDeployment": "NOT_AUTHORIZED_BY_THIS_MANIFEST"
+  },
+  "safety": {
+    "preserveExistingApp": true,
+    "doNotOverwriteMain": true,
+    "verifyProviderAuthorization": true
+  },
+  "notes": "Coordination metadata only. Does not imply cross-repository runtime integration, tests, deployed agents, or connected APIs."
+}
