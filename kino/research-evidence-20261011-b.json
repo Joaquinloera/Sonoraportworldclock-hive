@@ -1,0 +1,30 @@
+{
+  "operation": "KINO-281102",
+  "date": "2026-10-11",
+  "researchMode": "TINYFISH_OFFICIAL_DOC_FETCH",
+  "executionStatus": "SOURCE_FETCHED_NOT_AGENT_AUTONOMY",
+  "records": [
+    {
+      "division": "CENTCOM",
+      "provider": "GitHub Apps",
+      "url": "https://docs.github.com/en/apps/using-github-apps/about-using-github-apps",
+      "findings": [
+        "Apps must be installed on user or organization accounts",
+        "Installation permissions and repository access scope are explicitly granted",
+        "Agent apps are described as public preview"
+      ],
+      "integrationStatus": "NOT_CONNECTED",
+      "crossCheck": "PENDING"
+    },
+    {
+      "division": "CYBERCOM",
+      "provider": "Supabase RLS",
+      "url": "https://supabase.com/docs/guides/database/postgres/row-level-security",
+      "findings": [
+        "Official RLS guidance retrieved for access-policy review"
+      ],
+      "integrationStatus": "NOT_CONNECTED",
+      "crossCheck": "PENDING"
+    }
+  ]
+}
