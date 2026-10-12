@@ -1,0 +1,54 @@
+{
+  "operation": "KINO-281102",
+  "date": "2026-10-11",
+  "method": "parallel TinyFish discovery followed by official-source fetch",
+  "status": "RESEARCHED_NOT_CONNECTED",
+  "targets": [
+    {
+      "name": "CIPS",
+      "country": "China",
+      "official": "https://www.cips.com.cn/kjjqgsyyingw/index/index.shtml",
+      "fetch": "SUCCESS",
+      "finding": "Official participant listings retrieved; no public payment API or authorization confirmed",
+      "next": "Check institutional access and technical specifications"
+    },
+    {
+      "name": "NPCI UPI",
+      "country": "India",
+      "official": "https://www.npci.org.in/product/upi",
+      "fetch": "EMPTY_CONTENT",
+      "finding": "Official source discovered but extraction returned empty_content",
+      "next": "Retry official documentation and provider onboarding sources"
+    },
+    {
+      "name": "Pix DICT API",
+      "country": "Brazil",
+      "official": "https://www.bcb.gov.br/content/estabilidadefinanceira/pix/API-DICT.html",
+      "fetch": "SUCCESS",
+      "finding": "Official DICT API documentation lists authentication, digital signature, rate limiting, versioning, error handling, directory operations",
+      "next": "Extract authentication protocol and permitted participant scope"
+    },
+    {
+      "name": "PayShap",
+      "country": "South Africa",
+      "official": "https://www.payshap.co.za/",
+      "fetch": "SUCCESS",
+      "finding": "Official site states payments available at participating banks; public direct API not established",
+      "next": "Research bank and payment-provider participation"
+    },
+    {
+      "name": "SPEI",
+      "country": "Mexico",
+      "official": "https://www.banxico.org.mx/services/spei_-transfers-banco-mexico.html",
+      "fetch": "SUCCESS",
+      "finding": "Banco de Mexico describes SPEI as real-time gross settlement among participants",
+      "next": "Verify institutional access and participant technical documents"
+    }
+  ],
+  "counts": {
+    "searched": 5,
+    "officialFetched": 4,
+    "fetchFailures": 1,
+    "liveConnections": 0
+  }
+}
