@@ -1,0 +1,285 @@
+{
+  "schema_version": "1.0.0",
+  "registry_name": "SONORAPORT_30_AGENT_ORCHESTRATION_PLAN",
+  "status": "DEFINED_NOT_DEPLOYED",
+  "generated_date": "2026-10-12",
+  "source_registry": "Joaquinloera/Sonoraportworldclock-hive/apk-ai-swarm-registry.json",
+  "target_agents": 30,
+  "existing_logical_agents": 19,
+  "newly_defined_agents": 11,
+  "agents": [
+    {
+      "id": "#281102",
+      "role": "CENTRAL_COORDINATOR",
+      "source": "existing_command",
+      "ordinal": 1,
+      "execution_status": "NOT_VERIFIED_RUNNING",
+      "requires_evidence": true
+    },
+    {
+      "id": "#1290",
+      "role": "SWARM_COORDINATOR",
+      "source": "existing_swarm",
+      "ordinal": 2,
+      "execution_status": "NOT_VERIFIED_RUNNING",
+      "requires_evidence": true
+    },
+    {
+      "id": "#333",
+      "role": "DISCOVERY",
+      "source": "existing_swarm",
+      "ordinal": 3,
+      "execution_status": "NOT_VERIFIED_RUNNING",
+      "requires_evidence": true
+    },
+    {
+      "id": "#13",
+      "role": "INTEGRATION",
+      "source": "existing_swarm",
+      "ordinal": 4,
+      "execution_status": "NOT_VERIFIED_RUNNING",
+      "requires_evidence": true
+    },
+    {
+      "id": "#23",
+      "role": "DATA_COORDINATOR",
+      "source": "existing_swarm",
+      "ordinal": 5,
+      "execution_status": "NOT_VERIFIED_RUNNING",
+      "requires_evidence": true
+    },
+    {
+      "id": "#139013",
+      "role": "AI_PROVIDER_COORDINATOR",
+      "source": "existing_swarm",
+      "ordinal": 6,
+      "execution_status": "NOT_VERIFIED_RUNNING",
+      "requires_evidence": true
+    },
+    {
+      "id": "#67",
+      "role": "SECURITY_GATE",
+      "source": "existing_swarm",
+      "ordinal": 7,
+      "execution_status": "NOT_VERIFIED_RUNNING",
+      "requires_evidence": true
+    },
+    {
+      "id": "#121",
+      "role": "VERIFIER",
+      "source": "existing_swarm",
+      "ordinal": 8,
+      "execution_status": "NOT_VERIFIED_RUNNING",
+      "requires_evidence": true
+    },
+    {
+      "id": "#420",
+      "role": "SNAPSHOT_ENGINE",
+      "source": "existing_swarm",
+      "ordinal": 9,
+      "execution_status": "NOT_VERIFIED_RUNNING",
+      "requires_evidence": true
+    },
+    {
+      "id": "#144K",
+      "role": "BIOCORE",
+      "source": "existing_swarm",
+      "ordinal": 10,
+      "execution_status": "NOT_VERIFIED_RUNNING",
+      "requires_evidence": true
+    },
+    {
+      "id": "#1109",
+      "role": "WORLD_CLOCK",
+      "source": "existing_swarm",
+      "ordinal": 11,
+      "execution_status": "NOT_VERIFIED_RUNNING",
+      "requires_evidence": true
+    },
+    {
+      "id": "#7717",
+      "role": "OFFLINE_ENGINE",
+      "source": "existing_swarm",
+      "ordinal": 12,
+      "execution_status": "NOT_VERIFIED_RUNNING",
+      "requires_evidence": true
+    },
+    {
+      "id": "#777787777",
+      "role": "AUDIT_RECEIPTS",
+      "source": "existing_swarm",
+      "ordinal": 13,
+      "execution_status": "NOT_VERIFIED_RUNNING",
+      "requires_evidence": true
+    },
+    {
+      "id": "#7777",
+      "role": "CODE_SKIMMER",
+      "source": "existing_skimmer",
+      "ordinal": 14,
+      "execution_status": "NOT_VERIFIED_RUNNING",
+      "requires_evidence": true
+    },
+    {
+      "id": "#4444",
+      "role": "API_SDK_SKIMMER",
+      "source": "existing_skimmer",
+      "ordinal": 15,
+      "execution_status": "NOT_VERIFIED_RUNNING",
+      "requires_evidence": true
+    },
+    {
+      "id": "#55",
+      "role": "INDEX_SKIMMER",
+      "source": "existing_skimmer",
+      "ordinal": 16,
+      "execution_status": "NOT_VERIFIED_RUNNING",
+      "requires_evidence": true
+    },
+    {
+      "id": "#5515",
+      "role": "DEPENDENCY_SKIMMER",
+      "source": "existing_skimmer",
+      "ordinal": 17,
+      "execution_status": "NOT_VERIFIED_RUNNING",
+      "requires_evidence": true
+    },
+    {
+      "id": "#5555",
+      "role": "RESEARCH_SKIMMER",
+      "source": "existing_skimmer",
+      "ordinal": 18,
+      "execution_status": "NOT_VERIFIED_RUNNING",
+      "requires_evidence": true
+    },
+    {
+      "id": "X6 PIE",
+      "role": "CROSS_CHECK",
+      "source": "existing_skimmer",
+      "ordinal": 19,
+      "execution_status": "NOT_VERIFIED_RUNNING",
+      "requires_evidence": true
+    },
+    {
+      "id": "#88",
+      "role": "CYBERCOM_SECURITY_REVIEW",
+      "source": "planned_addition",
+      "ordinal": 20,
+      "execution_status": "NOT_VERIFIED_RUNNING",
+      "requires_evidence": true
+    },
+    {
+      "id": "#1111",
+      "role": "CENTCOM_ARCHITECTURE_INTEGRATIONS",
+      "source": "planned_addition",
+      "ordinal": 21,
+      "execution_status": "NOT_VERIFIED_RUNNING",
+      "requires_evidence": true
+    },
+    {
+      "id": "#2222",
+      "role": "SOUTHCOM_VENDOR_GOVERNMENT_API_RESEARCH",
+      "source": "planned_addition",
+      "ordinal": 22,
+      "execution_status": "NOT_VERIFIED_RUNNING",
+      "requires_evidence": true
+    },
+    {
+      "id": "#5505",
+      "role": "SUPPORT_AGENT_ROLE_PENDING_VERIFICATION",
+      "source": "planned_addition",
+      "ordinal": 23,
+      "execution_status": "NOT_VERIFIED_RUNNING",
+      "requires_evidence": true
+    },
+    {
+      "id": "#281103",
+      "role": "GLOBAL_BANKING_GATEWAY",
+      "source": "planned_addition",
+      "ordinal": 24,
+      "execution_status": "NOT_VERIFIED_RUNNING",
+      "requires_evidence": true
+    },
+    {
+      "id": "#281104",
+      "role": "BRICS_FINANCIAL_GATEWAY",
+      "source": "planned_addition",
+      "ordinal": 25,
+      "execution_status": "NOT_VERIFIED_RUNNING",
+      "requires_evidence": true
+    },
+    {
+      "id": "#281105",
+      "role": "INTERNATIONAL_PAYMENT_CORRIDORS",
+      "source": "planned_addition",
+      "ordinal": 26,
+      "execution_status": "NOT_VERIFIED_RUNNING",
+      "requires_evidence": true
+    },
+    {
+      "id": "#281106",
+      "role": "MULTICURRENCY_TREASURY",
+      "source": "planned_addition",
+      "ordinal": 27,
+      "execution_status": "NOT_VERIFIED_RUNNING",
+      "requires_evidence": true
+    },
+    {
+      "id": "#281107",
+      "role": "MERCHANT_PAYMENTS",
+      "source": "planned_addition",
+      "ordinal": 28,
+      "execution_status": "NOT_VERIFIED_RUNNING",
+      "requires_evidence": true
+    },
+    {
+      "id": "#281108",
+      "role": "BLOCKCHAIN_DIGITAL_ASSETS",
+      "source": "planned_addition",
+      "ordinal": 29,
+      "execution_status": "NOT_VERIFIED_RUNNING",
+      "requires_evidence": true
+    },
+    {
+      "id": "#281109",
+      "role": "DEPLOYMENT_TEST_AUTOMATION",
+      "source": "planned_addition",
+      "ordinal": 30,
+      "execution_status": "NOT_VERIFIED_RUNNING",
+      "requires_evidence": true
+    }
+  ],
+  "execution": {
+    "mode": "BOUNDED_SWARM",
+    "max_parallel_workers": 8,
+    "queue_enabled": true,
+    "verification_required": true,
+    "fail_closed": true,
+    "steps": [
+      "ASSIGN",
+      "SWARM",
+      "SKIM",
+      "CROSS_CHECK",
+      "SECURITY_REVIEW",
+      "ARCHITECTURE_REVIEW",
+      "CODE",
+      "TEST",
+      "SAVE",
+      "VERIFY"
+    ],
+    "approval_required_for": [
+      "production_deployment",
+      "financial_transaction",
+      "credential_rotation"
+    ]
+  },
+  "provider_capacity": {
+    "nexvio_confirmed_enabled": 1,
+    "nexvio_additional_slots": "LIMIT_REACHED",
+    "note": "Logical agent definitions are not deployed Nexvio agents."
+  },
+  "secrets_policy": {
+    "raw_keys_in_repo": false,
+    "server_side_only": true
+  }
+}
