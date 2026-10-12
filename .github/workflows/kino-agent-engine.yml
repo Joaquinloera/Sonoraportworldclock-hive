@@ -1,0 +1,34 @@
+name: KINO Agent Engine Tests
+on:
+  push:
+    branches:
+      - kino/integrated-six-repo-20261011
+    paths:
+      - 'kino/**'
+      - '.github/workflows/kino-agent-engine.yml'
+  pull_request:
+    paths:
+      - 'kino/**'
+      - '.github/workflows/kino-agent-engine.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  agent-tests:
+    name: Verify KINO SWARM engine
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v4
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Check KINO JavaScript syntax
+        run: |
+          node --check kino/agent-orchestrator.cjs
+          node --check kino/swarm-queue.cjs
+          node --check kino/research-worker.cjs
+      - name: Run agent, queue, and worker tests
+        run: node --test kino/*.test.cjs
