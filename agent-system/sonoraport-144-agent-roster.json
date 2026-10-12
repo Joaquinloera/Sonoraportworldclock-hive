@@ -1,0 +1,2451 @@
+{
+  "schema_version": "2.0.0",
+  "registry_name": "SONORAPORT_144_LOGICAL_AGENTS",
+  "generated_date": "2026-10-12",
+  "coordinator": "#281102",
+  "prior_roster_path": "agent-system/sonoraport-30-agent-roster.json",
+  "canonicalization": "Preserve original 30 identities and add 114 regional specialist definitions without overwriting historical registries",
+  "current_target_agents": 144,
+  "long_term_target_logical_agents": 144000,
+  "existing_logical_agents": 30,
+  "additional_logical_agents": 114,
+  "live_executors_verified": 0,
+  "hostingProviderState": "NOT_VERIFIED_FOR_THIS_ROSTER",
+  "status": "DEFINED_NOT_DEPLOYED",
+  "execution": {
+    "mode": "BOUNDED_SWARM",
+    "max_parallel_workers": 8,
+    "queue_enabled": true,
+    "verified_evidence_required": true,
+    "fail_closed": true,
+    "financial_operations_require_separate_explicit_approval": true,
+    "production_deployments_require_separate_explicit_approval": true
+  },
+  "security": {
+    "raw_credentials_in_registry": false,
+    "actual_account_access_granted": false,
+    "provider_onboarding_required": true,
+    "no_credential_extraction": true,
+    "no_production_funds_movement": true
+  },
+  "regionalLanes": [
+    {
+      "id": "CHINA",
+      "scope": "China / CIPS / ICBC / BOC",
+      "roles": [
+        "DISCOVERY",
+        "API_AUTH_SKIM",
+        "SDK_ENDPOINT_SKIM",
+        "SECURITY_PERMISSIONS",
+        "CROSS_CHECK_EVIDENCE",
+        "INTEGRATION_TEST"
+      ]
+    },
+    {
+      "id": "INDIA",
+      "scope": "India / UPI / banking",
+      "roles": [
+        "DISCOVERY",
+        "API_AUTH_SKIM",
+        "SDK_ENDPOINT_SKIM",
+        "SECURITY_PERMISSIONS",
+        "CROSS_CHECK_EVIDENCE",
+        "INTEGRATION_TEST"
+      ]
+    },
+    {
+      "id": "BRAZIL",
+      "scope": "Brazil / Pix / Open Finance",
+      "roles": [
+        "DISCOVERY",
+        "API_AUTH_SKIM",
+        "SDK_ENDPOINT_SKIM",
+        "SECURITY_PERMISSIONS",
+        "CROSS_CHECK_EVIDENCE",
+        "INTEGRATION_TEST"
+      ]
+    },
+    {
+      "id": "RUSSIA",
+      "scope": "Russia / SPFS / bank research",
+      "roles": [
+        "DISCOVERY",
+        "API_AUTH_SKIM",
+        "SDK_ENDPOINT_SKIM",
+        "SECURITY_PERMISSIONS",
+        "CROSS_CHECK_EVIDENCE",
+        "INTEGRATION_TEST"
+      ]
+    },
+    {
+      "id": "SOUTH_AFRICA",
+      "scope": "South Africa / PayShap / banking",
+      "roles": [
+        "DISCOVERY",
+        "API_AUTH_SKIM",
+        "SDK_ENDPOINT_SKIM",
+        "SECURITY_PERMISSIONS",
+        "CROSS_CHECK_EVIDENCE",
+        "INTEGRATION_TEST"
+      ]
+    },
+    {
+      "id": "EGYPT",
+      "scope": "Egypt / IPN / banking",
+      "roles": [
+        "DISCOVERY",
+        "API_AUTH_SKIM",
+        "SDK_ENDPOINT_SKIM",
+        "SECURITY_PERMISSIONS",
+        "CROSS_CHECK_EVIDENCE",
+        "INTEGRATION_TEST"
+      ]
+    },
+    {
+      "id": "ETHIOPIA",
+      "scope": "Ethiopia / EthSwitch / banking",
+      "roles": [
+        "DISCOVERY",
+        "API_AUTH_SKIM",
+        "SDK_ENDPOINT_SKIM",
+        "SECURITY_PERMISSIONS",
+        "CROSS_CHECK_EVIDENCE",
+        "INTEGRATION_TEST"
+      ]
+    },
+    {
+      "id": "IRAN",
+      "scope": "Iran / authorized public research only",
+      "roles": [
+        "DISCOVERY",
+        "API_AUTH_SKIM",
+        "SDK_ENDPOINT_SKIM",
+        "SECURITY_PERMISSIONS",
+        "CROSS_CHECK_EVIDENCE",
+        "INTEGRATION_TEST"
+      ]
+    },
+    {
+      "id": "UAE",
+      "scope": "United Arab Emirates / Aani",
+      "roles": [
+        "DISCOVERY",
+        "API_AUTH_SKIM",
+        "SDK_ENDPOINT_SKIM",
+        "SECURITY_PERMISSIONS",
+        "CROSS_CHECK_EVIDENCE",
+        "INTEGRATION_TEST"
+      ]
+    },
+    {
+      "id": "SAUDI_ARABIA",
+      "scope": "Saudi Arabia / SARIE",
+      "roles": [
+        "DISCOVERY",
+        "API_AUTH_SKIM",
+        "SDK_ENDPOINT_SKIM",
+        "SECURITY_PERMISSIONS",
+        "CROSS_CHECK_EVIDENCE",
+        "INTEGRATION_TEST"
+      ]
+    },
+    {
+      "id": "INDONESIA",
+      "scope": "Indonesia / BI / payments",
+      "roles": [
+        "DISCOVERY",
+        "API_AUTH_SKIM",
+        "SDK_ENDPOINT_SKIM",
+        "SECURITY_PERMISSIONS",
+        "CROSS_CHECK_EVIDENCE",
+        "INTEGRATION_TEST"
+      ]
+    },
+    {
+      "id": "US_CANADA",
+      "scope": "US / Canada commercial banking",
+      "roles": [
+        "DISCOVERY",
+        "API_AUTH_SKIM",
+        "SDK_ENDPOINT_SKIM",
+        "SECURITY_PERMISSIONS",
+        "CROSS_CHECK_EVIDENCE",
+        "INTEGRATION_TEST"
+      ]
+    },
+    {
+      "id": "MEXICO",
+      "scope": "Mexico / SPEI / CoDi / DiMo",
+      "roles": [
+        "DISCOVERY",
+        "API_AUTH_SKIM",
+        "SDK_ENDPOINT_SKIM",
+        "SECURITY_PERMISSIONS",
+        "CROSS_CHECK_EVIDENCE",
+        "INTEGRATION_TEST"
+      ]
+    },
+    {
+      "id": "SOUTH_AMERICA",
+      "scope": "Rest of South America",
+      "roles": [
+        "DISCOVERY",
+        "API_AUTH_SKIM",
+        "SDK_ENDPOINT_SKIM",
+        "SECURITY_PERMISSIONS",
+        "CROSS_CHECK_EVIDENCE",
+        "INTEGRATION_TEST"
+      ]
+    },
+    {
+      "id": "CARIBBEAN",
+      "scope": "Caribbean banking / payment systems",
+      "roles": [
+        "DISCOVERY",
+        "API_AUTH_SKIM",
+        "SDK_ENDPOINT_SKIM",
+        "SECURITY_PERMISSIONS",
+        "CROSS_CHECK_EVIDENCE",
+        "INTEGRATION_TEST"
+      ]
+    },
+    {
+      "id": "EUROPE",
+      "scope": "EU / UK / European banking",
+      "roles": [
+        "DISCOVERY",
+        "API_AUTH_SKIM",
+        "SDK_ENDPOINT_SKIM",
+        "SECURITY_PERMISSIONS",
+        "CROSS_CHECK_EVIDENCE",
+        "INTEGRATION_TEST"
+      ]
+    },
+    {
+      "id": "AFRICA_OTHER",
+      "scope": "Other Africa banking",
+      "roles": [
+        "DISCOVERY",
+        "API_AUTH_SKIM",
+        "SDK_ENDPOINT_SKIM",
+        "SECURITY_PERMISSIONS",
+        "CROSS_CHECK_EVIDENCE",
+        "INTEGRATION_TEST"
+      ]
+    },
+    {
+      "id": "ASIA_PACIFIC",
+      "scope": "Asia-Pacific banking",
+      "roles": [
+        "DISCOVERY",
+        "API_AUTH_SKIM",
+        "SDK_ENDPOINT_SKIM",
+        "SECURITY_PERMISSIONS",
+        "CROSS_CHECK_EVIDENCE",
+        "INTEGRATION_TEST"
+      ]
+    },
+    {
+      "id": "GLOBAL_RAILS",
+      "scope": "SWIFT / cards / treasury / digital assets",
+      "roles": [
+        "DISCOVERY",
+        "API_AUTH_SKIM",
+        "SDK_ENDPOINT_SKIM",
+        "SECURITY_PERMISSIONS",
+        "CROSS_CHECK_EVIDENCE",
+        "INTEGRATION_TEST"
+      ]
+    }
+  ],
+  "stages": [
+    "AI_AGENTS",
+    "SWARM",
+    "SKIM",
+    "CROSS_CHECK",
+    "CODE",
+    "TEST",
+    "SAVE",
+    "VERIFY"
+  ],
+  "agents": [
+    {
+      "id": "#281102",
+      "role": "CENTRAL_COORDINATOR",
+      "source": "existing_command",
+      "ordinal": 1,
+      "execution_status": "NOT_VERIFIED_RUNNING",
+      "requires_evidence": true
+    },
+    {
+      "id": "#1290",
+      "role": "SWARM_COORDINATOR",
+      "source": "existing_swarm",
+      "ordinal": 2,
+      "execution_status": "NOT_VERIFIED_RUNNING",
+      "requires_evidence": true
+    },
+    {
+      "id": "#333",
+      "role": "DISCOVERY",
+      "source": "existing_swarm",
+      "ordinal": 3,
+      "execution_status": "NOT_VERIFIED_RUNNING",
+      "requires_evidence": true
+    },
+    {
+      "id": "#13",
+      "role": "INTEGRATION",
+      "source": "existing_swarm",
+      "ordinal": 4,
+      "execution_status": "NOT_VERIFIED_RUNNING",
+      "requires_evidence": true
+    },
+    {
+      "id": "#23",
+      "role": "DATA_COORDINATOR",
+      "source": "existing_swarm",
+      "ordinal": 5,
+      "execution_status": "NOT_VERIFIED_RUNNING",
+      "requires_evidence": true
+    },
+    {
+      "id": "#139013",
+      "role": "AI_PROVIDER_COORDINATOR",
+      "source": "existing_swarm",
+      "ordinal": 6,
+      "execution_status": "NOT_VERIFIED_RUNNING",
+      "requires_evidence": true
+    },
+    {
+      "id": "#67",
+      "role": "SECURITY_GATE",
+      "source": "existing_swarm",
+      "ordinal": 7,
+      "execution_status": "NOT_VERIFIED_RUNNING",
+      "requires_evidence": true
+    },
+    {
+      "id": "#121",
+      "role": "VERIFIER",
+      "source": "existing_swarm",
+      "ordinal": 8,
+      "execution_status": "NOT_VERIFIED_RUNNING",
+      "requires_evidence": true
+    },
+    {
+      "id": "#420",
+      "role": "SNAPSHOT_ENGINE",
+      "source": "existing_swarm",
+      "ordinal": 9,
+      "execution_status": "NOT_VERIFIED_RUNNING",
+      "requires_evidence": true
+    },
+    {
+      "id": "#144K",
+      "role": "BIOCORE",
+      "source": "existing_swarm",
+      "ordinal": 10,
+      "execution_status": "NOT_VERIFIED_RUNNING",
+      "requires_evidence": true
+    },
+    {
+      "id": "#1109",
+      "role": "WORLD_CLOCK",
+      "source": "existing_swarm",
+      "ordinal": 11,
+      "execution_status": "NOT_VERIFIED_RUNNING",
+      "requires_evidence": true
+    },
+    {
+      "id": "#7717",
+      "role": "OFFLINE_ENGINE",
+      "source": "existing_swarm",
+      "ordinal": 12,
+      "execution_status": "NOT_VERIFIED_RUNNING",
+      "requires_evidence": true
+    },
+    {
+      "id": "#777787777",
+      "role": "AUDIT_RECEIPTS",
+      "source": "existing_swarm",
+      "ordinal": 13,
+      "execution_status": "NOT_VERIFIED_RUNNING",
+      "requires_evidence": true
+    },
+    {
+      "id": "#7777",
+      "role": "CODE_SKIMMER",
+      "source": "existing_skimmer",
+      "ordinal": 14,
+      "execution_status": "NOT_VERIFIED_RUNNING",
+      "requires_evidence": true
+    },
+    {
+      "id": "#4444",
+      "role": "API_SDK_SKIMMER",
+      "source": "existing_skimmer",
+      "ordinal": 15,
+      "execution_status": "NOT_VERIFIED_RUNNING",
+      "requires_evidence": true
+    },
+    {
+      "id": "#55",
+      "role": "INDEX_SKIMMER",
+      "source": "existing_skimmer",
+      "ordinal": 16,
+      "execution_status": "NOT_VERIFIED_RUNNING",
+      "requires_evidence": true
+    },
+    {
+      "id": "#5515",
+      "role": "DEPENDENCY_SKIMMER",
+      "source": "existing_skimmer",
+      "ordinal": 17,
+      "execution_status": "NOT_VERIFIED_RUNNING",
+      "requires_evidence": true
+    },
+    {
+      "id": "#5555",
+      "role": "RESEARCH_SKIMMER",
+      "source": "existing_skimmer",
+      "ordinal": 18,
+      "execution_status": "NOT_VERIFIED_RUNNING",
+      "requires_evidence": true
+    },
+    {
+      "id": "X6 PIE",
+      "role": "CROSS_CHECK",
+      "source": "existing_skimmer",
+      "ordinal": 19,
+      "execution_status": "NOT_VERIFIED_RUNNING",
+      "requires_evidence": true
+    },
+    {
+      "id": "#88",
+      "role": "CYBERCOM_SECURITY_REVIEW",
+      "source": "planned_addition",
+      "ordinal": 20,
+      "execution_status": "NOT_VERIFIED_RUNNING",
+      "requires_evidence": true
+    },
+    {
+      "id": "#1111",
+      "role": "CENTCOM_ARCHITECTURE_INTEGRATIONS",
+      "source": "planned_addition",
+      "ordinal": 21,
+      "execution_status": "NOT_VERIFIED_RUNNING",
+      "requires_evidence": true
+    },
+    {
+      "id": "#2222",
+      "role": "SOUTHCOM_VENDOR_GOVERNMENT_API_RESEARCH",
+      "source": "planned_addition",
+      "ordinal": 22,
+      "execution_status": "NOT_VERIFIED_RUNNING",
+      "requires_evidence": true
+    },
+    {
+      "id": "#5505",
+      "role": "SUPPORT_AGENT_ROLE_PENDING_VERIFICATION",
+      "source": "planned_addition",
+      "ordinal": 23,
+      "execution_status": "NOT_VERIFIED_RUNNING",
+      "requires_evidence": true
+    },
+    {
+      "id": "#281103",
+      "role": "GLOBAL_BANKING_GATEWAY",
+      "source": "planned_addition",
+      "ordinal": 24,
+      "execution_status": "NOT_VERIFIED_RUNNING",
+      "requires_evidence": true
+    },
+    {
+      "id": "#281104",
+      "role": "BRICS_FINANCIAL_GATEWAY",
+      "source": "planned_addition",
+      "ordinal": 25,
+      "execution_status": "NOT_VERIFIED_RUNNING",
+      "requires_evidence": true
+    },
+    {
+      "id": "#281105",
+      "role": "INTERNATIONAL_PAYMENT_CORRIDORS",
+      "source": "planned_addition",
+      "ordinal": 26,
+      "execution_status": "NOT_VERIFIED_RUNNING",
+      "requires_evidence": true
+    },
+    {
+      "id": "#281106",
+      "role": "MULTICURRENCY_TREASURY",
+      "source": "planned_addition",
+      "ordinal": 27,
+      "execution_status": "NOT_VERIFIED_RUNNING",
+      "requires_evidence": true
+    },
+    {
+      "id": "#281107",
+      "role": "MERCHANT_PAYMENTS",
+      "source": "planned_addition",
+      "ordinal": 28,
+      "execution_status": "NOT_VERIFIED_RUNNING",
+      "requires_evidence": true
+    },
+    {
+      "id": "#281108",
+      "role": "BLOCKCHAIN_DIGITAL_ASSETS",
+      "source": "planned_addition",
+      "ordinal": 29,
+      "execution_status": "NOT_VERIFIED_RUNNING",
+      "requires_evidence": true
+    },
+    {
+      "id": "#281109",
+      "role": "DEPLOYMENT_TEST_AUTOMATION",
+      "source": "planned_addition",
+      "ordinal": 30,
+      "execution_status": "NOT_VERIFIED_RUNNING",
+      "requires_evidence": true
+    },
+    {
+      "id": "#281110",
+      "role": "CHINA_DISCOVERY",
+      "lane": "CHINA",
+      "regionalMandate": "China / CIPS / ICBC / BOC",
+      "workerRole": "DISCOVERY",
+      "source": "144_agent_expansion",
+      "execution_status": "NOT_VERIFIED_RUNNING",
+      "executorBinding": null,
+      "requires_evidence": true,
+      "allowedActions": [
+        "authorized_research",
+        "nonproduction_verification"
+      ],
+      "credentialAccess": "NONE_BY_DEFAULT",
+      "financialTransferPermission": false
+    },
+    {
+      "id": "#281111",
+      "role": "CHINA_API_AUTH_SKIM",
+      "lane": "CHINA",
+      "regionalMandate": "China / CIPS / ICBC / BOC",
+      "workerRole": "API_AUTH_SKIM",
+      "source": "144_agent_expansion",
+      "execution_status": "NOT_VERIFIED_RUNNING",
+      "executorBinding": null,
+      "requires_evidence": true,
+      "allowedActions": [
+        "authorized_research",
+        "nonproduction_verification"
+      ],
+      "credentialAccess": "NONE_BY_DEFAULT",
+      "financialTransferPermission": false
+    },
+    {
+      "id": "#281112",
+      "role": "CHINA_SDK_ENDPOINT_SKIM",
+      "lane": "CHINA",
+      "regionalMandate": "China / CIPS / ICBC / BOC",
+      "workerRole": "SDK_ENDPOINT_SKIM",
+      "source": "144_agent_expansion",
+      "execution_status": "NOT_VERIFIED_RUNNING",
+      "executorBinding": null,
+      "requires_evidence": true,
+      "allowedActions": [
+        "authorized_research",
+        "nonproduction_verification"
+      ],
+      "credentialAccess": "NONE_BY_DEFAULT",
+      "financialTransferPermission": false
+    },
+    {
+      "id": "#281113",
+      "role": "CHINA_SECURITY_PERMISSIONS",
+      "lane": "CHINA",
+      "regionalMandate": "China / CIPS / ICBC / BOC",
+      "workerRole": "SECURITY_PERMISSIONS",
+      "source": "144_agent_expansion",
+      "execution_status": "NOT_VERIFIED_RUNNING",
+      "executorBinding": null,
+      "requires_evidence": true,
+      "allowedActions": [
+        "authorized_research",
+        "nonproduction_verification"
+      ],
+      "credentialAccess": "NONE_BY_DEFAULT",
+      "financialTransferPermission": false
+    },
+    {
+      "id": "#281114",
+      "role": "CHINA_CROSS_CHECK_EVIDENCE",
+      "lane": "CHINA",
+      "regionalMandate": "China / CIPS / ICBC / BOC",
+      "workerRole": "CROSS_CHECK_EVIDENCE",
+      "source": "144_agent_expansion",
+      "execution_status": "NOT_VERIFIED_RUNNING",
+      "executorBinding": null,
+      "requires_evidence": true,
+      "allowedActions": [
+        "authorized_research",
+        "nonproduction_verification"
+      ],
+      "credentialAccess": "NONE_BY_DEFAULT",
+      "financialTransferPermission": false
+    },
+    {
+      "id": "#281115",
+      "role": "CHINA_INTEGRATION_TEST",
+      "lane": "CHINA",
+      "regionalMandate": "China / CIPS / ICBC / BOC",
+      "workerRole": "INTEGRATION_TEST",
+      "source": "144_agent_expansion",
+      "execution_status": "NOT_VERIFIED_RUNNING",
+      "executorBinding": null,
+      "requires_evidence": true,
+      "allowedActions": [
+        "authorized_research",
+        "nonproduction_verification"
+      ],
+      "credentialAccess": "NONE_BY_DEFAULT",
+      "financialTransferPermission": false
+    },
+    {
+      "id": "#281116",
+      "role": "INDIA_DISCOVERY",
+      "lane": "INDIA",
+      "regionalMandate": "India / UPI / banking",
+      "workerRole": "DISCOVERY",
+      "source": "144_agent_expansion",
+      "execution_status": "NOT_VERIFIED_RUNNING",
+      "executorBinding": null,
+      "requires_evidence": true,
+      "allowedActions": [
+        "authorized_research",
+        "nonproduction_verification"
+      ],
+      "credentialAccess": "NONE_BY_DEFAULT",
+      "financialTransferPermission": false
+    },
+    {
+      "id": "#281117",
+      "role": "INDIA_API_AUTH_SKIM",
+      "lane": "INDIA",
+      "regionalMandate": "India / UPI / banking",
+      "workerRole": "API_AUTH_SKIM",
+      "source": "144_agent_expansion",
+      "execution_status": "NOT_VERIFIED_RUNNING",
+      "executorBinding": null,
+      "requires_evidence": true,
+      "allowedActions": [
+        "authorized_research",
+        "nonproduction_verification"
+      ],
+      "credentialAccess": "NONE_BY_DEFAULT",
+      "financialTransferPermission": false
+    },
+    {
+      "id": "#281118",
+      "role": "INDIA_SDK_ENDPOINT_SKIM",
+      "lane": "INDIA",
+      "regionalMandate": "India / UPI / banking",
+      "workerRole": "SDK_ENDPOINT_SKIM",
+      "source": "144_agent_expansion",
+      "execution_status": "NOT_VERIFIED_RUNNING",
+      "executorBinding": null,
+      "requires_evidence": true,
+      "allowedActions": [
+        "authorized_research",
+        "nonproduction_verification"
+      ],
+      "credentialAccess": "NONE_BY_DEFAULT",
+      "financialTransferPermission": false
+    },
+    {
+      "id": "#281119",
+      "role": "INDIA_SECURITY_PERMISSIONS",
+      "lane": "INDIA",
+      "regionalMandate": "India / UPI / banking",
+      "workerRole": "SECURITY_PERMISSIONS",
+      "source": "144_agent_expansion",
+      "execution_status": "NOT_VERIFIED_RUNNING",
+      "executorBinding": null,
+      "requires_evidence": true,
+      "allowedActions": [
+        "authorized_research",
+        "nonproduction_verification"
+      ],
+      "credentialAccess": "NONE_BY_DEFAULT",
+      "financialTransferPermission": false
+    },
+    {
+      "id": "#281120",
+      "role": "INDIA_CROSS_CHECK_EVIDENCE",
+      "lane": "INDIA",
+      "regionalMandate": "India / UPI / banking",
+      "workerRole": "CROSS_CHECK_EVIDENCE",
+      "source": "144_agent_expansion",
+      "execution_status": "NOT_VERIFIED_RUNNING",
+      "executorBinding": null,
+      "requires_evidence": true,
+      "allowedActions": [
+        "authorized_research",
+        "nonproduction_verification"
+      ],
+      "credentialAccess": "NONE_BY_DEFAULT",
+      "financialTransferPermission": false
+    },
+    {
+      "id": "#281121",
+      "role": "INDIA_INTEGRATION_TEST",
+      "lane": "INDIA",
+      "regionalMandate": "India / UPI / banking",
+      "workerRole": "INTEGRATION_TEST",
+      "source": "144_agent_expansion",
+      "execution_status": "NOT_VERIFIED_RUNNING",
+      "executorBinding": null,
+      "requires_evidence": true,
+      "allowedActions": [
+        "authorized_research",
+        "nonproduction_verification"
+      ],
+      "credentialAccess": "NONE_BY_DEFAULT",
+      "financialTransferPermission": false
+    },
+    {
+      "id": "#281122",
+      "role": "BRAZIL_DISCOVERY",
+      "lane": "BRAZIL",
+      "regionalMandate": "Brazil / Pix / Open Finance",
+      "workerRole": "DISCOVERY",
+      "source": "144_agent_expansion",
+      "execution_status": "NOT_VERIFIED_RUNNING",
+      "executorBinding": null,
+      "requires_evidence": true,
+      "allowedActions": [
+        "authorized_research",
+        "nonproduction_verification"
+      ],
+      "credentialAccess": "NONE_BY_DEFAULT",
+      "financialTransferPermission": false
+    },
+    {
+      "id": "#281123",
+      "role": "BRAZIL_API_AUTH_SKIM",
+      "lane": "BRAZIL",
+      "regionalMandate": "Brazil / Pix / Open Finance",
+      "workerRole": "API_AUTH_SKIM",
+      "source": "144_agent_expansion",
+      "execution_status": "NOT_VERIFIED_RUNNING",
+      "executorBinding": null,
+      "requires_evidence": true,
+      "allowedActions": [
+        "authorized_research",
+        "nonproduction_verification"
+      ],
+      "credentialAccess": "NONE_BY_DEFAULT",
+      "financialTransferPermission": false
+    },
+    {
+      "id": "#281124",
+      "role": "BRAZIL_SDK_ENDPOINT_SKIM",
+      "lane": "BRAZIL",
+      "regionalMandate": "Brazil / Pix / Open Finance",
+      "workerRole": "SDK_ENDPOINT_SKIM",
+      "source": "144_agent_expansion",
+      "execution_status": "NOT_VERIFIED_RUNNING",
+      "executorBinding": null,
+      "requires_evidence": true,
+      "allowedActions": [
+        "authorized_research",
+        "nonproduction_verification"
+      ],
+      "credentialAccess": "NONE_BY_DEFAULT",
+      "financialTransferPermission": false
+    },
+    {
+      "id": "#281125",
+      "role": "BRAZIL_SECURITY_PERMISSIONS",
+      "lane": "BRAZIL",
+      "regionalMandate": "Brazil / Pix / Open Finance",
+      "workerRole": "SECURITY_PERMISSIONS",
+      "source": "144_agent_expansion",
+      "execution_status": "NOT_VERIFIED_RUNNING",
+      "executorBinding": null,
+      "requires_evidence": true,
+      "allowedActions": [
+        "authorized_research",
+        "nonproduction_verification"
+      ],
+      "credentialAccess": "NONE_BY_DEFAULT",
+      "financialTransferPermission": false
+    },
+    {
+      "id": "#281126",
+      "role": "BRAZIL_CROSS_CHECK_EVIDENCE",
+      "lane": "BRAZIL",
+      "regionalMandate": "Brazil / Pix / Open Finance",
+      "workerRole": "CROSS_CHECK_EVIDENCE",
+      "source": "144_agent_expansion",
+      "execution_status": "NOT_VERIFIED_RUNNING",
+      "executorBinding": null,
+      "requires_evidence": true,
+      "allowedActions": [
+        "authorized_research",
+        "nonproduction_verification"
+      ],
+      "credentialAccess": "NONE_BY_DEFAULT",
+      "financialTransferPermission": false
+    },
+    {
+      "id": "#281127",
+      "role": "BRAZIL_INTEGRATION_TEST",
+      "lane": "BRAZIL",
+      "regionalMandate": "Brazil / Pix / Open Finance",
+      "workerRole": "INTEGRATION_TEST",
+      "source": "144_agent_expansion",
+      "execution_status": "NOT_VERIFIED_RUNNING",
+      "executorBinding": null,
+      "requires_evidence": true,
+      "allowedActions": [
+        "authorized_research",
+        "nonproduction_verification"
+      ],
+      "credentialAccess": "NONE_BY_DEFAULT",
+      "financialTransferPermission": false
+    },
+    {
+      "id": "#281128",
+      "role": "RUSSIA_DISCOVERY",
+      "lane": "RUSSIA",
+      "regionalMandate": "Russia / SPFS / bank research",
+      "workerRole": "DISCOVERY",
+      "source": "144_agent_expansion",
+      "execution_status": "NOT_VERIFIED_RUNNING",
+      "executorBinding": null,
+      "requires_evidence": true,
+      "allowedActions": [
+        "authorized_research",
+        "nonproduction_verification"
+      ],
+      "credentialAccess": "NONE_BY_DEFAULT",
+      "financialTransferPermission": false
+    },
+    {
+      "id": "#281129",
+      "role": "RUSSIA_API_AUTH_SKIM",
+      "lane": "RUSSIA",
+      "regionalMandate": "Russia / SPFS / bank research",
+      "workerRole": "API_AUTH_SKIM",
+      "source": "144_agent_expansion",
+      "execution_status": "NOT_VERIFIED_RUNNING",
+      "executorBinding": null,
+      "requires_evidence": true,
+      "allowedActions": [
+        "authorized_research",
+        "nonproduction_verification"
+      ],
+      "credentialAccess": "NONE_BY_DEFAULT",
+      "financialTransferPermission": false
+    },
+    {
+      "id": "#281130",
+      "role": "RUSSIA_SDK_ENDPOINT_SKIM",
+      "lane": "RUSSIA",
+      "regionalMandate": "Russia / SPFS / bank research",
+      "workerRole": "SDK_ENDPOINT_SKIM",
+      "source": "144_agent_expansion",
+      "execution_status": "NOT_VERIFIED_RUNNING",
+      "executorBinding": null,
+      "requires_evidence": true,
+      "allowedActions": [
+        "authorized_research",
+        "nonproduction_verification"
+      ],
+      "credentialAccess": "NONE_BY_DEFAULT",
+      "financialTransferPermission": false
+    },
+    {
+      "id": "#281131",
+      "role": "RUSSIA_SECURITY_PERMISSIONS",
+      "lane": "RUSSIA",
+      "regionalMandate": "Russia / SPFS / bank research",
+      "workerRole": "SECURITY_PERMISSIONS",
+      "source": "144_agent_expansion",
+      "execution_status": "NOT_VERIFIED_RUNNING",
+      "executorBinding": null,
+      "requires_evidence": true,
+      "allowedActions": [
+        "authorized_research",
+        "nonproduction_verification"
+      ],
+      "credentialAccess": "NONE_BY_DEFAULT",
+      "financialTransferPermission": false
+    },
+    {
+      "id": "#281132",
+      "role": "RUSSIA_CROSS_CHECK_EVIDENCE",
+      "lane": "RUSSIA",
+      "regionalMandate": "Russia / SPFS / bank research",
+      "workerRole": "CROSS_CHECK_EVIDENCE",
+      "source": "144_agent_expansion",
+      "execution_status": "NOT_VERIFIED_RUNNING",
+      "executorBinding": null,
+      "requires_evidence": true,
+      "allowedActions": [
+        "authorized_research",
+        "nonproduction_verification"
+      ],
+      "credentialAccess": "NONE_BY_DEFAULT",
+      "financialTransferPermission": false
+    },
+    {
+      "id": "#281133",
+      "role": "RUSSIA_INTEGRATION_TEST",
+      "lane": "RUSSIA",
+      "regionalMandate": "Russia / SPFS / bank research",
+      "workerRole": "INTEGRATION_TEST",
+      "source": "144_agent_expansion",
+      "execution_status": "NOT_VERIFIED_RUNNING",
+      "executorBinding": null,
+      "requires_evidence": true,
+      "allowedActions": [
+        "authorized_research",
+        "nonproduction_verification"
+      ],
+      "credentialAccess": "NONE_BY_DEFAULT",
+      "financialTransferPermission": false
+    },
+    {
+      "id": "#281134",
+      "role": "SOUTH_AFRICA_DISCOVERY",
+      "lane": "SOUTH_AFRICA",
+      "regionalMandate": "South Africa / PayShap / banking",
+      "workerRole": "DISCOVERY",
+      "source": "144_agent_expansion",
+      "execution_status": "NOT_VERIFIED_RUNNING",
+      "executorBinding": null,
+      "requires_evidence": true,
+      "allowedActions": [
+        "authorized_research",
+        "nonproduction_verification"
+      ],
+      "credentialAccess": "NONE_BY_DEFAULT",
+      "financialTransferPermission": false
+    },
+    {
+      "id": "#281135",
+      "role": "SOUTH_AFRICA_API_AUTH_SKIM",
+      "lane": "SOUTH_AFRICA",
+      "regionalMandate": "South Africa / PayShap / banking",
+      "workerRole": "API_AUTH_SKIM",
+      "source": "144_agent_expansion",
+      "execution_status": "NOT_VERIFIED_RUNNING",
+      "executorBinding": null,
+      "requires_evidence": true,
+      "allowedActions": [
+        "authorized_research",
+        "nonproduction_verification"
+      ],
+      "credentialAccess": "NONE_BY_DEFAULT",
+      "financialTransferPermission": false
+    },
+    {
+      "id": "#281136",
+      "role": "SOUTH_AFRICA_SDK_ENDPOINT_SKIM",
+      "lane": "SOUTH_AFRICA",
+      "regionalMandate": "South Africa / PayShap / banking",
+      "workerRole": "SDK_ENDPOINT_SKIM",
+      "source": "144_agent_expansion",
+      "execution_status": "NOT_VERIFIED_RUNNING",
+      "executorBinding": null,
+      "requires_evidence": true,
+      "allowedActions": [
+        "authorized_research",
+        "nonproduction_verification"
+      ],
+      "credentialAccess": "NONE_BY_DEFAULT",
+      "financialTransferPermission": false
+    },
+    {
+      "id": "#281137",
+      "role": "SOUTH_AFRICA_SECURITY_PERMISSIONS",
+      "lane": "SOUTH_AFRICA",
+      "regionalMandate": "South Africa / PayShap / banking",
+      "workerRole": "SECURITY_PERMISSIONS",
+      "source": "144_agent_expansion",
+      "execution_status": "NOT_VERIFIED_RUNNING",
+      "executorBinding": null,
+      "requires_evidence": true,
+      "allowedActions": [
+        "authorized_research",
+        "nonproduction_verification"
+      ],
+      "credentialAccess": "NONE_BY_DEFAULT",
+      "financialTransferPermission": false
+    },
+    {
+      "id": "#281138",
+      "role": "SOUTH_AFRICA_CROSS_CHECK_EVIDENCE",
+      "lane": "SOUTH_AFRICA",
+      "regionalMandate": "South Africa / PayShap / banking",
+      "workerRole": "CROSS_CHECK_EVIDENCE",
+      "source": "144_agent_expansion",
+      "execution_status": "NOT_VERIFIED_RUNNING",
+      "executorBinding": null,
+      "requires_evidence": true,
+      "allowedActions": [
+        "authorized_research",
+        "nonproduction_verification"
+      ],
+      "credentialAccess": "NONE_BY_DEFAULT",
+      "financialTransferPermission": false
+    },
+    {
+      "id": "#281139",
+      "role": "SOUTH_AFRICA_INTEGRATION_TEST",
+      "lane": "SOUTH_AFRICA",
+      "regionalMandate": "South Africa / PayShap / banking",
+      "workerRole": "INTEGRATION_TEST",
+      "source": "144_agent_expansion",
+      "execution_status": "NOT_VERIFIED_RUNNING",
+      "executorBinding": null,
+      "requires_evidence": true,
+      "allowedActions": [
+        "authorized_research",
+        "nonproduction_verification"
+      ],
+      "credentialAccess": "NONE_BY_DEFAULT",
+      "financialTransferPermission": false
+    },
+    {
+      "id": "#281140",
+      "role": "EGYPT_DISCOVERY",
+      "lane": "EGYPT",
+      "regionalMandate": "Egypt / IPN / banking",
+      "workerRole": "DISCOVERY",
+      "source": "144_agent_expansion",
+      "execution_status": "NOT_VERIFIED_RUNNING",
+      "executorBinding": null,
+      "requires_evidence": true,
+      "allowedActions": [
+        "authorized_research",
+        "nonproduction_verification"
+      ],
+      "credentialAccess": "NONE_BY_DEFAULT",
+      "financialTransferPermission": false
+    },
+    {
+      "id": "#281141",
+      "role": "EGYPT_API_AUTH_SKIM",
+      "lane": "EGYPT",
+      "regionalMandate": "Egypt / IPN / banking",
+      "workerRole": "API_AUTH_SKIM",
+      "source": "144_agent_expansion",
+      "execution_status": "NOT_VERIFIED_RUNNING",
+      "executorBinding": null,
+      "requires_evidence": true,
+      "allowedActions": [
+        "authorized_research",
+        "nonproduction_verification"
+      ],
+      "credentialAccess": "NONE_BY_DEFAULT",
+      "financialTransferPermission": false
+    },
+    {
+      "id": "#281142",
+      "role": "EGYPT_SDK_ENDPOINT_SKIM",
+      "lane": "EGYPT",
+      "regionalMandate": "Egypt / IPN / banking",
+      "workerRole": "SDK_ENDPOINT_SKIM",
+      "source": "144_agent_expansion",
+      "execution_status": "NOT_VERIFIED_RUNNING",
+      "executorBinding": null,
+      "requires_evidence": true,
+      "allowedActions": [
+        "authorized_research",
+        "nonproduction_verification"
+      ],
+      "credentialAccess": "NONE_BY_DEFAULT",
+      "financialTransferPermission": false
+    },
+    {
+      "id": "#281143",
+      "role": "EGYPT_SECURITY_PERMISSIONS",
+      "lane": "EGYPT",
+      "regionalMandate": "Egypt / IPN / banking",
+      "workerRole": "SECURITY_PERMISSIONS",
+      "source": "144_agent_expansion",
+      "execution_status": "NOT_VERIFIED_RUNNING",
+      "executorBinding": null,
+      "requires_evidence": true,
+      "allowedActions": [
+        "authorized_research",
+        "nonproduction_verification"
+      ],
+      "credentialAccess": "NONE_BY_DEFAULT",
+      "financialTransferPermission": false
+    },
+    {
+      "id": "#281144",
+      "role": "EGYPT_CROSS_CHECK_EVIDENCE",
+      "lane": "EGYPT",
+      "regionalMandate": "Egypt / IPN / banking",
+      "workerRole": "CROSS_CHECK_EVIDENCE",
+      "source": "144_agent_expansion",
+      "execution_status": "NOT_VERIFIED_RUNNING",
+      "executorBinding": null,
+      "requires_evidence": true,
+      "allowedActions": [
+        "authorized_research",
+        "nonproduction_verification"
+      ],
+      "credentialAccess": "NONE_BY_DEFAULT",
+      "financialTransferPermission": false
+    },
+    {
+      "id": "#281145",
+      "role": "EGYPT_INTEGRATION_TEST",
+      "lane": "EGYPT",
+      "regionalMandate": "Egypt / IPN / banking",
+      "workerRole": "INTEGRATION_TEST",
+      "source": "144_agent_expansion",
+      "execution_status": "NOT_VERIFIED_RUNNING",
+      "executorBinding": null,
+      "requires_evidence": true,
+      "allowedActions": [
+        "authorized_research",
+        "nonproduction_verification"
+      ],
+      "credentialAccess": "NONE_BY_DEFAULT",
+      "financialTransferPermission": false
+    },
+    {
+      "id": "#281146",
+      "role": "ETHIOPIA_DISCOVERY",
+      "lane": "ETHIOPIA",
+      "regionalMandate": "Ethiopia / EthSwitch / banking",
+      "workerRole": "DISCOVERY",
+      "source": "144_agent_expansion",
+      "execution_status": "NOT_VERIFIED_RUNNING",
+      "executorBinding": null,
+      "requires_evidence": true,
+      "allowedActions": [
+        "authorized_research",
+        "nonproduction_verification"
+      ],
+      "credentialAccess": "NONE_BY_DEFAULT",
+      "financialTransferPermission": false
+    },
+    {
+      "id": "#281147",
+      "role": "ETHIOPIA_API_AUTH_SKIM",
+      "lane": "ETHIOPIA",
+      "regionalMandate": "Ethiopia / EthSwitch / banking",
+      "workerRole": "API_AUTH_SKIM",
+      "source": "144_agent_expansion",
+      "execution_status": "NOT_VERIFIED_RUNNING",
+      "executorBinding": null,
+      "requires_evidence": true,
+      "allowedActions": [
+        "authorized_research",
+        "nonproduction_verification"
+      ],
+      "credentialAccess": "NONE_BY_DEFAULT",
+      "financialTransferPermission": false
+    },
+    {
+      "id": "#281148",
+      "role": "ETHIOPIA_SDK_ENDPOINT_SKIM",
+      "lane": "ETHIOPIA",
+      "regionalMandate": "Ethiopia / EthSwitch / banking",
+      "workerRole": "SDK_ENDPOINT_SKIM",
+      "source": "144_agent_expansion",
+      "execution_status": "NOT_VERIFIED_RUNNING",
+      "executorBinding": null,
+      "requires_evidence": true,
+      "allowedActions": [
+        "authorized_research",
+        "nonproduction_verification"
+      ],
+      "credentialAccess": "NONE_BY_DEFAULT",
+      "financialTransferPermission": false
+    },
+    {
+      "id": "#281149",
+      "role": "ETHIOPIA_SECURITY_PERMISSIONS",
+      "lane": "ETHIOPIA",
+      "regionalMandate": "Ethiopia / EthSwitch / banking",
+      "workerRole": "SECURITY_PERMISSIONS",
+      "source": "144_agent_expansion",
+      "execution_status": "NOT_VERIFIED_RUNNING",
+      "executorBinding": null,
+      "requires_evidence": true,
+      "allowedActions": [
+        "authorized_research",
+        "nonproduction_verification"
+      ],
+      "credentialAccess": "NONE_BY_DEFAULT",
+      "financialTransferPermission": false
+    },
+    {
+      "id": "#281150",
+      "role": "ETHIOPIA_CROSS_CHECK_EVIDENCE",
+      "lane": "ETHIOPIA",
+      "regionalMandate": "Ethiopia / EthSwitch / banking",
+      "workerRole": "CROSS_CHECK_EVIDENCE",
+      "source": "144_agent_expansion",
+      "execution_status": "NOT_VERIFIED_RUNNING",
+      "executorBinding": null,
+      "requires_evidence": true,
+      "allowedActions": [
+        "authorized_research",
+        "nonproduction_verification"
+      ],
+      "credentialAccess": "NONE_BY_DEFAULT",
+      "financialTransferPermission": false
+    },
+    {
+      "id": "#281151",
+      "role": "ETHIOPIA_INTEGRATION_TEST",
+      "lane": "ETHIOPIA",
+      "regionalMandate": "Ethiopia / EthSwitch / banking",
+      "workerRole": "INTEGRATION_TEST",
+      "source": "144_agent_expansion",
+      "execution_status": "NOT_VERIFIED_RUNNING",
+      "executorBinding": null,
+      "requires_evidence": true,
+      "allowedActions": [
+        "authorized_research",
+        "nonproduction_verification"
+      ],
+      "credentialAccess": "NONE_BY_DEFAULT",
+      "financialTransferPermission": false
+    },
+    {
+      "id": "#281152",
+      "role": "IRAN_DISCOVERY",
+      "lane": "IRAN",
+      "regionalMandate": "Iran / authorized public research only",
+      "workerRole": "DISCOVERY",
+      "source": "144_agent_expansion",
+      "execution_status": "NOT_VERIFIED_RUNNING",
+      "executorBinding": null,
+      "requires_evidence": true,
+      "allowedActions": [
+        "authorized_research",
+        "nonproduction_verification"
+      ],
+      "credentialAccess": "NONE_BY_DEFAULT",
+      "financialTransferPermission": false
+    },
+    {
+      "id": "#281153",
+      "role": "IRAN_API_AUTH_SKIM",
+      "lane": "IRAN",
+      "regionalMandate": "Iran / authorized public research only",
+      "workerRole": "API_AUTH_SKIM",
+      "source": "144_agent_expansion",
+      "execution_status": "NOT_VERIFIED_RUNNING",
+      "executorBinding": null,
+      "requires_evidence": true,
+      "allowedActions": [
+        "authorized_research",
+        "nonproduction_verification"
+      ],
+      "credentialAccess": "NONE_BY_DEFAULT",
+      "financialTransferPermission": false
+    },
+    {
+      "id": "#281154",
+      "role": "IRAN_SDK_ENDPOINT_SKIM",
+      "lane": "IRAN",
+      "regionalMandate": "Iran / authorized public research only",
+      "workerRole": "SDK_ENDPOINT_SKIM",
+      "source": "144_agent_expansion",
+      "execution_status": "NOT_VERIFIED_RUNNING",
+      "executorBinding": null,
+      "requires_evidence": true,
+      "allowedActions": [
+        "authorized_research",
+        "nonproduction_verification"
+      ],
+      "credentialAccess": "NONE_BY_DEFAULT",
+      "financialTransferPermission": false
+    },
+    {
+      "id": "#281155",
+      "role": "IRAN_SECURITY_PERMISSIONS",
+      "lane": "IRAN",
+      "regionalMandate": "Iran / authorized public research only",
+      "workerRole": "SECURITY_PERMISSIONS",
+      "source": "144_agent_expansion",
+      "execution_status": "NOT_VERIFIED_RUNNING",
+      "executorBinding": null,
+      "requires_evidence": true,
+      "allowedActions": [
+        "authorized_research",
+        "nonproduction_verification"
+      ],
+      "credentialAccess": "NONE_BY_DEFAULT",
+      "financialTransferPermission": false
+    },
+    {
+      "id": "#281156",
+      "role": "IRAN_CROSS_CHECK_EVIDENCE",
+      "lane": "IRAN",
+      "regionalMandate": "Iran / authorized public research only",
+      "workerRole": "CROSS_CHECK_EVIDENCE",
+      "source": "144_agent_expansion",
+      "execution_status": "NOT_VERIFIED_RUNNING",
+      "executorBinding": null,
+      "requires_evidence": true,
+      "allowedActions": [
+        "authorized_research",
+        "nonproduction_verification"
+      ],
+      "credentialAccess": "NONE_BY_DEFAULT",
+      "financialTransferPermission": false
+    },
+    {
+      "id": "#281157",
+      "role": "IRAN_INTEGRATION_TEST",
+      "lane": "IRAN",
+      "regionalMandate": "Iran / authorized public research only",
+      "workerRole": "INTEGRATION_TEST",
+      "source": "144_agent_expansion",
+      "execution_status": "NOT_VERIFIED_RUNNING",
+      "executorBinding": null,
+      "requires_evidence": true,
+      "allowedActions": [
+        "authorized_research",
+        "nonproduction_verification"
+      ],
+      "credentialAccess": "NONE_BY_DEFAULT",
+      "financialTransferPermission": false
+    },
+    {
+      "id": "#281158",
+      "role": "UAE_DISCOVERY",
+      "lane": "UAE",
+      "regionalMandate": "United Arab Emirates / Aani",
+      "workerRole": "DISCOVERY",
+      "source": "144_agent_expansion",
+      "execution_status": "NOT_VERIFIED_RUNNING",
+      "executorBinding": null,
+      "requires_evidence": true,
+      "allowedActions": [
+        "authorized_research",
+        "nonproduction_verification"
+      ],
+      "credentialAccess": "NONE_BY_DEFAULT",
+      "financialTransferPermission": false
+    },
+    {
+      "id": "#281159",
+      "role": "UAE_API_AUTH_SKIM",
+      "lane": "UAE",
+      "regionalMandate": "United Arab Emirates / Aani",
+      "workerRole": "API_AUTH_SKIM",
+      "source": "144_agent_expansion",
+      "execution_status": "NOT_VERIFIED_RUNNING",
+      "executorBinding": null,
+      "requires_evidence": true,
+      "allowedActions": [
+        "authorized_research",
+        "nonproduction_verification"
+      ],
+      "credentialAccess": "NONE_BY_DEFAULT",
+      "financialTransferPermission": false
+    },
+    {
+      "id": "#281160",
+      "role": "UAE_SDK_ENDPOINT_SKIM",
+      "lane": "UAE",
+      "regionalMandate": "United Arab Emirates / Aani",
+      "workerRole": "SDK_ENDPOINT_SKIM",
+      "source": "144_agent_expansion",
+      "execution_status": "NOT_VERIFIED_RUNNING",
+      "executorBinding": null,
+      "requires_evidence": true,
+      "allowedActions": [
+        "authorized_research",
+        "nonproduction_verification"
+      ],
+      "credentialAccess": "NONE_BY_DEFAULT",
+      "financialTransferPermission": false
+    },
+    {
+      "id": "#281161",
+      "role": "UAE_SECURITY_PERMISSIONS",
+      "lane": "UAE",
+      "regionalMandate": "United Arab Emirates / Aani",
+      "workerRole": "SECURITY_PERMISSIONS",
+      "source": "144_agent_expansion",
+      "execution_status": "NOT_VERIFIED_RUNNING",
+      "executorBinding": null,
+      "requires_evidence": true,
+      "allowedActions": [
+        "authorized_research",
+        "nonproduction_verification"
+      ],
+      "credentialAccess": "NONE_BY_DEFAULT",
+      "financialTransferPermission": false
+    },
+    {
+      "id": "#281162",
+      "role": "UAE_CROSS_CHECK_EVIDENCE",
+      "lane": "UAE",
+      "regionalMandate": "United Arab Emirates / Aani",
+      "workerRole": "CROSS_CHECK_EVIDENCE",
+      "source": "144_agent_expansion",
+      "execution_status": "NOT_VERIFIED_RUNNING",
+      "executorBinding": null,
+      "requires_evidence": true,
+      "allowedActions": [
+        "authorized_research",
+        "nonproduction_verification"
+      ],
+      "credentialAccess": "NONE_BY_DEFAULT",
+      "financialTransferPermission": false
+    },
+    {
+      "id": "#281163",
+      "role": "UAE_INTEGRATION_TEST",
+      "lane": "UAE",
+      "regionalMandate": "United Arab Emirates / Aani",
+      "workerRole": "INTEGRATION_TEST",
+      "source": "144_agent_expansion",
+      "execution_status": "NOT_VERIFIED_RUNNING",
+      "executorBinding": null,
+      "requires_evidence": true,
+      "allowedActions": [
+        "authorized_research",
+        "nonproduction_verification"
+      ],
+      "credentialAccess": "NONE_BY_DEFAULT",
+      "financialTransferPermission": false
+    },
+    {
+      "id": "#281164",
+      "role": "SAUDI_ARABIA_DISCOVERY",
+      "lane": "SAUDI_ARABIA",
+      "regionalMandate": "Saudi Arabia / SARIE",
+      "workerRole": "DISCOVERY",
+      "source": "144_agent_expansion",
+      "execution_status": "NOT_VERIFIED_RUNNING",
+      "executorBinding": null,
+      "requires_evidence": true,
+      "allowedActions": [
+        "authorized_research",
+        "nonproduction_verification"
+      ],
+      "credentialAccess": "NONE_BY_DEFAULT",
+      "financialTransferPermission": false
+    },
+    {
+      "id": "#281165",
+      "role": "SAUDI_ARABIA_API_AUTH_SKIM",
+      "lane": "SAUDI_ARABIA",
+      "regionalMandate": "Saudi Arabia / SARIE",
+      "workerRole": "API_AUTH_SKIM",
+      "source": "144_agent_expansion",
+      "execution_status": "NOT_VERIFIED_RUNNING",
+      "executorBinding": null,
+      "requires_evidence": true,
+      "allowedActions": [
+        "authorized_research",
+        "nonproduction_verification"
+      ],
+      "credentialAccess": "NONE_BY_DEFAULT",
+      "financialTransferPermission": false
+    },
+    {
+      "id": "#281166",
+      "role": "SAUDI_ARABIA_SDK_ENDPOINT_SKIM",
+      "lane": "SAUDI_ARABIA",
+      "regionalMandate": "Saudi Arabia / SARIE",
+      "workerRole": "SDK_ENDPOINT_SKIM",
+      "source": "144_agent_expansion",
+      "execution_status": "NOT_VERIFIED_RUNNING",
+      "executorBinding": null,
+      "requires_evidence": true,
+      "allowedActions": [
+        "authorized_research",
+        "nonproduction_verification"
+      ],
+      "credentialAccess": "NONE_BY_DEFAULT",
+      "financialTransferPermission": false
+    },
+    {
+      "id": "#281167",
+      "role": "SAUDI_ARABIA_SECURITY_PERMISSIONS",
+      "lane": "SAUDI_ARABIA",
+      "regionalMandate": "Saudi Arabia / SARIE",
+      "workerRole": "SECURITY_PERMISSIONS",
+      "source": "144_agent_expansion",
+      "execution_status": "NOT_VERIFIED_RUNNING",
+      "executorBinding": null,
+      "requires_evidence": true,
+      "allowedActions": [
+        "authorized_research",
+        "nonproduction_verification"
+      ],
+      "credentialAccess": "NONE_BY_DEFAULT",
+      "financialTransferPermission": false
+    },
+    {
+      "id": "#281168",
+      "role": "SAUDI_ARABIA_CROSS_CHECK_EVIDENCE",
+      "lane": "SAUDI_ARABIA",
+      "regionalMandate": "Saudi Arabia / SARIE",
+      "workerRole": "CROSS_CHECK_EVIDENCE",
+      "source": "144_agent_expansion",
+      "execution_status": "NOT_VERIFIED_RUNNING",
+      "executorBinding": null,
+      "requires_evidence": true,
+      "allowedActions": [
+        "authorized_research",
+        "nonproduction_verification"
+      ],
+      "credentialAccess": "NONE_BY_DEFAULT",
+      "financialTransferPermission": false
+    },
+    {
+      "id": "#281169",
+      "role": "SAUDI_ARABIA_INTEGRATION_TEST",
+      "lane": "SAUDI_ARABIA",
+      "regionalMandate": "Saudi Arabia / SARIE",
+      "workerRole": "INTEGRATION_TEST",
+      "source": "144_agent_expansion",
+      "execution_status": "NOT_VERIFIED_RUNNING",
+      "executorBinding": null,
+      "requires_evidence": true,
+      "allowedActions": [
+        "authorized_research",
+        "nonproduction_verification"
+      ],
+      "credentialAccess": "NONE_BY_DEFAULT",
+      "financialTransferPermission": false
+    },
+    {
+      "id": "#281170",
+      "role": "INDONESIA_DISCOVERY",
+      "lane": "INDONESIA",
+      "regionalMandate": "Indonesia / BI / payments",
+      "workerRole": "DISCOVERY",
+      "source": "144_agent_expansion",
+      "execution_status": "NOT_VERIFIED_RUNNING",
+      "executorBinding": null,
+      "requires_evidence": true,
+      "allowedActions": [
+        "authorized_research",
+        "nonproduction_verification"
+      ],
+      "credentialAccess": "NONE_BY_DEFAULT",
+      "financialTransferPermission": false
+    },
+    {
+      "id": "#281171",
+      "role": "INDONESIA_API_AUTH_SKIM",
+      "lane": "INDONESIA",
+      "regionalMandate": "Indonesia / BI / payments",
+      "workerRole": "API_AUTH_SKIM",
+      "source": "144_agent_expansion",
+      "execution_status": "NOT_VERIFIED_RUNNING",
+      "executorBinding": null,
+      "requires_evidence": true,
+      "allowedActions": [
+        "authorized_research",
+        "nonproduction_verification"
+      ],
+      "credentialAccess": "NONE_BY_DEFAULT",
+      "financialTransferPermission": false
+    },
+    {
+      "id": "#281172",
+      "role": "INDONESIA_SDK_ENDPOINT_SKIM",
+      "lane": "INDONESIA",
+      "regionalMandate": "Indonesia / BI / payments",
+      "workerRole": "SDK_ENDPOINT_SKIM",
+      "source": "144_agent_expansion",
+      "execution_status": "NOT_VERIFIED_RUNNING",
+      "executorBinding": null,
+      "requires_evidence": true,
+      "allowedActions": [
+        "authorized_research",
+        "nonproduction_verification"
+      ],
+      "credentialAccess": "NONE_BY_DEFAULT",
+      "financialTransferPermission": false
+    },
+    {
+      "id": "#281173",
+      "role": "INDONESIA_SECURITY_PERMISSIONS",
+      "lane": "INDONESIA",
+      "regionalMandate": "Indonesia / BI / payments",
+      "workerRole": "SECURITY_PERMISSIONS",
+      "source": "144_agent_expansion",
+      "execution_status": "NOT_VERIFIED_RUNNING",
+      "executorBinding": null,
+      "requires_evidence": true,
+      "allowedActions": [
+        "authorized_research",
+        "nonproduction_verification"
+      ],
+      "credentialAccess": "NONE_BY_DEFAULT",
+      "financialTransferPermission": false
+    },
+    {
+      "id": "#281174",
+      "role": "INDONESIA_CROSS_CHECK_EVIDENCE",
+      "lane": "INDONESIA",
+      "regionalMandate": "Indonesia / BI / payments",
+      "workerRole": "CROSS_CHECK_EVIDENCE",
+      "source": "144_agent_expansion",
+      "execution_status": "NOT_VERIFIED_RUNNING",
+      "executorBinding": null,
+      "requires_evidence": true,
+      "allowedActions": [
+        "authorized_research",
+        "nonproduction_verification"
+      ],
+      "credentialAccess": "NONE_BY_DEFAULT",
+      "financialTransferPermission": false
+    },
+    {
+      "id": "#281175",
+      "role": "INDONESIA_INTEGRATION_TEST",
+      "lane": "INDONESIA",
+      "regionalMandate": "Indonesia / BI / payments",
+      "workerRole": "INTEGRATION_TEST",
+      "source": "144_agent_expansion",
+      "execution_status": "NOT_VERIFIED_RUNNING",
+      "executorBinding": null,
+      "requires_evidence": true,
+      "allowedActions": [
+        "authorized_research",
+        "nonproduction_verification"
+      ],
+      "credentialAccess": "NONE_BY_DEFAULT",
+      "financialTransferPermission": false
+    },
+    {
+      "id": "#281176",
+      "role": "US_CANADA_DISCOVERY",
+      "lane": "US_CANADA",
+      "regionalMandate": "US / Canada commercial banking",
+      "workerRole": "DISCOVERY",
+      "source": "144_agent_expansion",
+      "execution_status": "NOT_VERIFIED_RUNNING",
+      "executorBinding": null,
+      "requires_evidence": true,
+      "allowedActions": [
+        "authorized_research",
+        "nonproduction_verification"
+      ],
+      "credentialAccess": "NONE_BY_DEFAULT",
+      "financialTransferPermission": false
+    },
+    {
+      "id": "#281177",
+      "role": "US_CANADA_API_AUTH_SKIM",
+      "lane": "US_CANADA",
+      "regionalMandate": "US / Canada commercial banking",
+      "workerRole": "API_AUTH_SKIM",
+      "source": "144_agent_expansion",
+      "execution_status": "NOT_VERIFIED_RUNNING",
+      "executorBinding": null,
+      "requires_evidence": true,
+      "allowedActions": [
+        "authorized_research",
+        "nonproduction_verification"
+      ],
+      "credentialAccess": "NONE_BY_DEFAULT",
+      "financialTransferPermission": false
+    },
+    {
+      "id": "#281178",
+      "role": "US_CANADA_SDK_ENDPOINT_SKIM",
+      "lane": "US_CANADA",
+      "regionalMandate": "US / Canada commercial banking",
+      "workerRole": "SDK_ENDPOINT_SKIM",
+      "source": "144_agent_expansion",
+      "execution_status": "NOT_VERIFIED_RUNNING",
+      "executorBinding": null,
+      "requires_evidence": true,
+      "allowedActions": [
+        "authorized_research",
+        "nonproduction_verification"
+      ],
+      "credentialAccess": "NONE_BY_DEFAULT",
+      "financialTransferPermission": false
+    },
+    {
+      "id": "#281179",
+      "role": "US_CANADA_SECURITY_PERMISSIONS",
+      "lane": "US_CANADA",
+      "regionalMandate": "US / Canada commercial banking",
+      "workerRole": "SECURITY_PERMISSIONS",
+      "source": "144_agent_expansion",
+      "execution_status": "NOT_VERIFIED_RUNNING",
+      "executorBinding": null,
+      "requires_evidence": true,
+      "allowedActions": [
+        "authorized_research",
+        "nonproduction_verification"
+      ],
+      "credentialAccess": "NONE_BY_DEFAULT",
+      "financialTransferPermission": false
+    },
+    {
+      "id": "#281180",
+      "role": "US_CANADA_CROSS_CHECK_EVIDENCE",
+      "lane": "US_CANADA",
+      "regionalMandate": "US / Canada commercial banking",
+      "workerRole": "CROSS_CHECK_EVIDENCE",
+      "source": "144_agent_expansion",
+      "execution_status": "NOT_VERIFIED_RUNNING",
+      "executorBinding": null,
+      "requires_evidence": true,
+      "allowedActions": [
+        "authorized_research",
+        "nonproduction_verification"
+      ],
+      "credentialAccess": "NONE_BY_DEFAULT",
+      "financialTransferPermission": false
+    },
+    {
+      "id": "#281181",
+      "role": "US_CANADA_INTEGRATION_TEST",
+      "lane": "US_CANADA",
+      "regionalMandate": "US / Canada commercial banking",
+      "workerRole": "INTEGRATION_TEST",
+      "source": "144_agent_expansion",
+      "execution_status": "NOT_VERIFIED_RUNNING",
+      "executorBinding": null,
+      "requires_evidence": true,
+      "allowedActions": [
+        "authorized_research",
+        "nonproduction_verification"
+      ],
+      "credentialAccess": "NONE_BY_DEFAULT",
+      "financialTransferPermission": false
+    },
+    {
+      "id": "#281182",
+      "role": "MEXICO_DISCOVERY",
+      "lane": "MEXICO",
+      "regionalMandate": "Mexico / SPEI / CoDi / DiMo",
+      "workerRole": "DISCOVERY",
+      "source": "144_agent_expansion",
+      "execution_status": "NOT_VERIFIED_RUNNING",
+      "executorBinding": null,
+      "requires_evidence": true,
+      "allowedActions": [
+        "authorized_research",
+        "nonproduction_verification"
+      ],
+      "credentialAccess": "NONE_BY_DEFAULT",
+      "financialTransferPermission": false
+    },
+    {
+      "id": "#281183",
+      "role": "MEXICO_API_AUTH_SKIM",
+      "lane": "MEXICO",
+      "regionalMandate": "Mexico / SPEI / CoDi / DiMo",
+      "workerRole": "API_AUTH_SKIM",
+      "source": "144_agent_expansion",
+      "execution_status": "NOT_VERIFIED_RUNNING",
+      "executorBinding": null,
+      "requires_evidence": true,
+      "allowedActions": [
+        "authorized_research",
+        "nonproduction_verification"
+      ],
+      "credentialAccess": "NONE_BY_DEFAULT",
+      "financialTransferPermission": false
+    },
+    {
+      "id": "#281184",
+      "role": "MEXICO_SDK_ENDPOINT_SKIM",
+      "lane": "MEXICO",
+      "regionalMandate": "Mexico / SPEI / CoDi / DiMo",
+      "workerRole": "SDK_ENDPOINT_SKIM",
+      "source": "144_agent_expansion",
+      "execution_status": "NOT_VERIFIED_RUNNING",
+      "executorBinding": null,
+      "requires_evidence": true,
+      "allowedActions": [
+        "authorized_research",
+        "nonproduction_verification"
+      ],
+      "credentialAccess": "NONE_BY_DEFAULT",
+      "financialTransferPermission": false
+    },
+    {
+      "id": "#281185",
+      "role": "MEXICO_SECURITY_PERMISSIONS",
+      "lane": "MEXICO",
+      "regionalMandate": "Mexico / SPEI / CoDi / DiMo",
+      "workerRole": "SECURITY_PERMISSIONS",
+      "source": "144_agent_expansion",
+      "execution_status": "NOT_VERIFIED_RUNNING",
+      "executorBinding": null,
+      "requires_evidence": true,
+      "allowedActions": [
+        "authorized_research",
+        "nonproduction_verification"
+      ],
+      "credentialAccess": "NONE_BY_DEFAULT",
+      "financialTransferPermission": false
+    },
+    {
+      "id": "#281186",
+      "role": "MEXICO_CROSS_CHECK_EVIDENCE",
+      "lane": "MEXICO",
+      "regionalMandate": "Mexico / SPEI / CoDi / DiMo",
+      "workerRole": "CROSS_CHECK_EVIDENCE",
+      "source": "144_agent_expansion",
+      "execution_status": "NOT_VERIFIED_RUNNING",
+      "executorBinding": null,
+      "requires_evidence": true,
+      "allowedActions": [
+        "authorized_research",
+        "nonproduction_verification"
+      ],
+      "credentialAccess": "NONE_BY_DEFAULT",
+      "financialTransferPermission": false
+    },
+    {
+      "id": "#281187",
+      "role": "MEXICO_INTEGRATION_TEST",
+      "lane": "MEXICO",
+      "regionalMandate": "Mexico / SPEI / CoDi / DiMo",
+      "workerRole": "INTEGRATION_TEST",
+      "source": "144_agent_expansion",
+      "execution_status": "NOT_VERIFIED_RUNNING",
+      "executorBinding": null,
+      "requires_evidence": true,
+      "allowedActions": [
+        "authorized_research",
+        "nonproduction_verification"
+      ],
+      "credentialAccess": "NONE_BY_DEFAULT",
+      "financialTransferPermission": false
+    },
+    {
+      "id": "#281188",
+      "role": "SOUTH_AMERICA_DISCOVERY",
+      "lane": "SOUTH_AMERICA",
+      "regionalMandate": "Rest of South America",
+      "workerRole": "DISCOVERY",
+      "source": "144_agent_expansion",
+      "execution_status": "NOT_VERIFIED_RUNNING",
+      "executorBinding": null,
+      "requires_evidence": true,
+      "allowedActions": [
+        "authorized_research",
+        "nonproduction_verification"
+      ],
+      "credentialAccess": "NONE_BY_DEFAULT",
+      "financialTransferPermission": false
+    },
+    {
+      "id": "#281189",
+      "role": "SOUTH_AMERICA_API_AUTH_SKIM",
+      "lane": "SOUTH_AMERICA",
+      "regionalMandate": "Rest of South America",
+      "workerRole": "API_AUTH_SKIM",
+      "source": "144_agent_expansion",
+      "execution_status": "NOT_VERIFIED_RUNNING",
+      "executorBinding": null,
+      "requires_evidence": true,
+      "allowedActions": [
+        "authorized_research",
+        "nonproduction_verification"
+      ],
+      "credentialAccess": "NONE_BY_DEFAULT",
+      "financialTransferPermission": false
+    },
+    {
+      "id": "#281190",
+      "role": "SOUTH_AMERICA_SDK_ENDPOINT_SKIM",
+      "lane": "SOUTH_AMERICA",
+      "regionalMandate": "Rest of South America",
+      "workerRole": "SDK_ENDPOINT_SKIM",
+      "source": "144_agent_expansion",
+      "execution_status": "NOT_VERIFIED_RUNNING",
+      "executorBinding": null,
+      "requires_evidence": true,
+      "allowedActions": [
+        "authorized_research",
+        "nonproduction_verification"
+      ],
+      "credentialAccess": "NONE_BY_DEFAULT",
+      "financialTransferPermission": false
+    },
+    {
+      "id": "#281191",
+      "role": "SOUTH_AMERICA_SECURITY_PERMISSIONS",
+      "lane": "SOUTH_AMERICA",
+      "regionalMandate": "Rest of South America",
+      "workerRole": "SECURITY_PERMISSIONS",
+      "source": "144_agent_expansion",
+      "execution_status": "NOT_VERIFIED_RUNNING",
+      "executorBinding": null,
+      "requires_evidence": true,
+      "allowedActions": [
+        "authorized_research",
+        "nonproduction_verification"
+      ],
+      "credentialAccess": "NONE_BY_DEFAULT",
+      "financialTransferPermission": false
+    },
+    {
+      "id": "#281192",
+      "role": "SOUTH_AMERICA_CROSS_CHECK_EVIDENCE",
+      "lane": "SOUTH_AMERICA",
+      "regionalMandate": "Rest of South America",
+      "workerRole": "CROSS_CHECK_EVIDENCE",
+      "source": "144_agent_expansion",
+      "execution_status": "NOT_VERIFIED_RUNNING",
+      "executorBinding": null,
+      "requires_evidence": true,
+      "allowedActions": [
+        "authorized_research",
+        "nonproduction_verification"
+      ],
+      "credentialAccess": "NONE_BY_DEFAULT",
+      "financialTransferPermission": false
+    },
+    {
+      "id": "#281193",
+      "role": "SOUTH_AMERICA_INTEGRATION_TEST",
+      "lane": "SOUTH_AMERICA",
+      "regionalMandate": "Rest of South America",
+      "workerRole": "INTEGRATION_TEST",
+      "source": "144_agent_expansion",
+      "execution_status": "NOT_VERIFIED_RUNNING",
+      "executorBinding": null,
+      "requires_evidence": true,
+      "allowedActions": [
+        "authorized_research",
+        "nonproduction_verification"
+      ],
+      "credentialAccess": "NONE_BY_DEFAULT",
+      "financialTransferPermission": false
+    },
+    {
+      "id": "#281194",
+      "role": "CARIBBEAN_DISCOVERY",
+      "lane": "CARIBBEAN",
+      "regionalMandate": "Caribbean banking / payment systems",
+      "workerRole": "DISCOVERY",
+      "source": "144_agent_expansion",
+      "execution_status": "NOT_VERIFIED_RUNNING",
+      "executorBinding": null,
+      "requires_evidence": true,
+      "allowedActions": [
+        "authorized_research",
+        "nonproduction_verification"
+      ],
+      "credentialAccess": "NONE_BY_DEFAULT",
+      "financialTransferPermission": false
+    },
+    {
+      "id": "#281195",
+      "role": "CARIBBEAN_API_AUTH_SKIM",
+      "lane": "CARIBBEAN",
+      "regionalMandate": "Caribbean banking / payment systems",
+      "workerRole": "API_AUTH_SKIM",
+      "source": "144_agent_expansion",
+      "execution_status": "NOT_VERIFIED_RUNNING",
+      "executorBinding": null,
+      "requires_evidence": true,
+      "allowedActions": [
+        "authorized_research",
+        "nonproduction_verification"
+      ],
+      "credentialAccess": "NONE_BY_DEFAULT",
+      "financialTransferPermission": false
+    },
+    {
+      "id": "#281196",
+      "role": "CARIBBEAN_SDK_ENDPOINT_SKIM",
+      "lane": "CARIBBEAN",
+      "regionalMandate": "Caribbean banking / payment systems",
+      "workerRole": "SDK_ENDPOINT_SKIM",
+      "source": "144_agent_expansion",
+      "execution_status": "NOT_VERIFIED_RUNNING",
+      "executorBinding": null,
+      "requires_evidence": true,
+      "allowedActions": [
+        "authorized_research",
+        "nonproduction_verification"
+      ],
+      "credentialAccess": "NONE_BY_DEFAULT",
+      "financialTransferPermission": false
+    },
+    {
+      "id": "#281197",
+      "role": "CARIBBEAN_SECURITY_PERMISSIONS",
+      "lane": "CARIBBEAN",
+      "regionalMandate": "Caribbean banking / payment systems",
+      "workerRole": "SECURITY_PERMISSIONS",
+      "source": "144_agent_expansion",
+      "execution_status": "NOT_VERIFIED_RUNNING",
+      "executorBinding": null,
+      "requires_evidence": true,
+      "allowedActions": [
+        "authorized_research",
+        "nonproduction_verification"
+      ],
+      "credentialAccess": "NONE_BY_DEFAULT",
+      "financialTransferPermission": false
+    },
+    {
+      "id": "#281198",
+      "role": "CARIBBEAN_CROSS_CHECK_EVIDENCE",
+      "lane": "CARIBBEAN",
+      "regionalMandate": "Caribbean banking / payment systems",
+      "workerRole": "CROSS_CHECK_EVIDENCE",
+      "source": "144_agent_expansion",
+      "execution_status": "NOT_VERIFIED_RUNNING",
+      "executorBinding": null,
+      "requires_evidence": true,
+      "allowedActions": [
+        "authorized_research",
+        "nonproduction_verification"
+      ],
+      "credentialAccess": "NONE_BY_DEFAULT",
+      "financialTransferPermission": false
+    },
+    {
+      "id": "#281199",
+      "role": "CARIBBEAN_INTEGRATION_TEST",
+      "lane": "CARIBBEAN",
+      "regionalMandate": "Caribbean banking / payment systems",
+      "workerRole": "INTEGRATION_TEST",
+      "source": "144_agent_expansion",
+      "execution_status": "NOT_VERIFIED_RUNNING",
+      "executorBinding": null,
+      "requires_evidence": true,
+      "allowedActions": [
+        "authorized_research",
+        "nonproduction_verification"
+      ],
+      "credentialAccess": "NONE_BY_DEFAULT",
+      "financialTransferPermission": false
+    },
+    {
+      "id": "#281200",
+      "role": "EUROPE_DISCOVERY",
+      "lane": "EUROPE",
+      "regionalMandate": "EU / UK / European banking",
+      "workerRole": "DISCOVERY",
+      "source": "144_agent_expansion",
+      "execution_status": "NOT_VERIFIED_RUNNING",
+      "executorBinding": null,
+      "requires_evidence": true,
+      "allowedActions": [
+        "authorized_research",
+        "nonproduction_verification"
+      ],
+      "credentialAccess": "NONE_BY_DEFAULT",
+      "financialTransferPermission": false
+    },
+    {
+      "id": "#281201",
+      "role": "EUROPE_API_AUTH_SKIM",
+      "lane": "EUROPE",
+      "regionalMandate": "EU / UK / European banking",
+      "workerRole": "API_AUTH_SKIM",
+      "source": "144_agent_expansion",
+      "execution_status": "NOT_VERIFIED_RUNNING",
+      "executorBinding": null,
+      "requires_evidence": true,
+      "allowedActions": [
+        "authorized_research",
+        "nonproduction_verification"
+      ],
+      "credentialAccess": "NONE_BY_DEFAULT",
+      "financialTransferPermission": false
+    },
+    {
+      "id": "#281202",
+      "role": "EUROPE_SDK_ENDPOINT_SKIM",
+      "lane": "EUROPE",
+      "regionalMandate": "EU / UK / European banking",
+      "workerRole": "SDK_ENDPOINT_SKIM",
+      "source": "144_agent_expansion",
+      "execution_status": "NOT_VERIFIED_RUNNING",
+      "executorBinding": null,
+      "requires_evidence": true,
+      "allowedActions": [
+        "authorized_research",
+        "nonproduction_verification"
+      ],
+      "credentialAccess": "NONE_BY_DEFAULT",
+      "financialTransferPermission": false
+    },
+    {
+      "id": "#281203",
+      "role": "EUROPE_SECURITY_PERMISSIONS",
+      "lane": "EUROPE",
+      "regionalMandate": "EU / UK / European banking",
+      "workerRole": "SECURITY_PERMISSIONS",
+      "source": "144_agent_expansion",
+      "execution_status": "NOT_VERIFIED_RUNNING",
+      "executorBinding": null,
+      "requires_evidence": true,
+      "allowedActions": [
+        "authorized_research",
+        "nonproduction_verification"
+      ],
+      "credentialAccess": "NONE_BY_DEFAULT",
+      "financialTransferPermission": false
+    },
+    {
+      "id": "#281204",
+      "role": "EUROPE_CROSS_CHECK_EVIDENCE",
+      "lane": "EUROPE",
+      "regionalMandate": "EU / UK / European banking",
+      "workerRole": "CROSS_CHECK_EVIDENCE",
+      "source": "144_agent_expansion",
+      "execution_status": "NOT_VERIFIED_RUNNING",
+      "executorBinding": null,
+      "requires_evidence": true,
+      "allowedActions": [
+        "authorized_research",
+        "nonproduction_verification"
+      ],
+      "credentialAccess": "NONE_BY_DEFAULT",
+      "financialTransferPermission": false
+    },
+    {
+      "id": "#281205",
+      "role": "EUROPE_INTEGRATION_TEST",
+      "lane": "EUROPE",
+      "regionalMandate": "EU / UK / European banking",
+      "workerRole": "INTEGRATION_TEST",
+      "source": "144_agent_expansion",
+      "execution_status": "NOT_VERIFIED_RUNNING",
+      "executorBinding": null,
+      "requires_evidence": true,
+      "allowedActions": [
+        "authorized_research",
+        "nonproduction_verification"
+      ],
+      "credentialAccess": "NONE_BY_DEFAULT",
+      "financialTransferPermission": false
+    },
+    {
+      "id": "#281206",
+      "role": "AFRICA_OTHER_DISCOVERY",
+      "lane": "AFRICA_OTHER",
+      "regionalMandate": "Other Africa banking",
+      "workerRole": "DISCOVERY",
+      "source": "144_agent_expansion",
+      "execution_status": "NOT_VERIFIED_RUNNING",
+      "executorBinding": null,
+      "requires_evidence": true,
+      "allowedActions": [
+        "authorized_research",
+        "nonproduction_verification"
+      ],
+      "credentialAccess": "NONE_BY_DEFAULT",
+      "financialTransferPermission": false
+    },
+    {
+      "id": "#281207",
+      "role": "AFRICA_OTHER_API_AUTH_SKIM",
+      "lane": "AFRICA_OTHER",
+      "regionalMandate": "Other Africa banking",
+      "workerRole": "API_AUTH_SKIM",
+      "source": "144_agent_expansion",
+      "execution_status": "NOT_VERIFIED_RUNNING",
+      "executorBinding": null,
+      "requires_evidence": true,
+      "allowedActions": [
+        "authorized_research",
+        "nonproduction_verification"
+      ],
+      "credentialAccess": "NONE_BY_DEFAULT",
+      "financialTransferPermission": false
+    },
+    {
+      "id": "#281208",
+      "role": "AFRICA_OTHER_SDK_ENDPOINT_SKIM",
+      "lane": "AFRICA_OTHER",
+      "regionalMandate": "Other Africa banking",
+      "workerRole": "SDK_ENDPOINT_SKIM",
+      "source": "144_agent_expansion",
+      "execution_status": "NOT_VERIFIED_RUNNING",
+      "executorBinding": null,
+      "requires_evidence": true,
+      "allowedActions": [
+        "authorized_research",
+        "nonproduction_verification"
+      ],
+      "credentialAccess": "NONE_BY_DEFAULT",
+      "financialTransferPermission": false
+    },
+    {
+      "id": "#281209",
+      "role": "AFRICA_OTHER_SECURITY_PERMISSIONS",
+      "lane": "AFRICA_OTHER",
+      "regionalMandate": "Other Africa banking",
+      "workerRole": "SECURITY_PERMISSIONS",
+      "source": "144_agent_expansion",
+      "execution_status": "NOT_VERIFIED_RUNNING",
+      "executorBinding": null,
+      "requires_evidence": true,
+      "allowedActions": [
+        "authorized_research",
+        "nonproduction_verification"
+      ],
+      "credentialAccess": "NONE_BY_DEFAULT",
+      "financialTransferPermission": false
+    },
+    {
+      "id": "#281210",
+      "role": "AFRICA_OTHER_CROSS_CHECK_EVIDENCE",
+      "lane": "AFRICA_OTHER",
+      "regionalMandate": "Other Africa banking",
+      "workerRole": "CROSS_CHECK_EVIDENCE",
+      "source": "144_agent_expansion",
+      "execution_status": "NOT_VERIFIED_RUNNING",
+      "executorBinding": null,
+      "requires_evidence": true,
+      "allowedActions": [
+        "authorized_research",
+        "nonproduction_verification"
+      ],
+      "credentialAccess": "NONE_BY_DEFAULT",
+      "financialTransferPermission": false
+    },
+    {
+      "id": "#281211",
+      "role": "AFRICA_OTHER_INTEGRATION_TEST",
+      "lane": "AFRICA_OTHER",
+      "regionalMandate": "Other Africa banking",
+      "workerRole": "INTEGRATION_TEST",
+      "source": "144_agent_expansion",
+      "execution_status": "NOT_VERIFIED_RUNNING",
+      "executorBinding": null,
+      "requires_evidence": true,
+      "allowedActions": [
+        "authorized_research",
+        "nonproduction_verification"
+      ],
+      "credentialAccess": "NONE_BY_DEFAULT",
+      "financialTransferPermission": false
+    },
+    {
+      "id": "#281212",
+      "role": "ASIA_PACIFIC_DISCOVERY",
+      "lane": "ASIA_PACIFIC",
+      "regionalMandate": "Asia-Pacific banking",
+      "workerRole": "DISCOVERY",
+      "source": "144_agent_expansion",
+      "execution_status": "NOT_VERIFIED_RUNNING",
+      "executorBinding": null,
+      "requires_evidence": true,
+      "allowedActions": [
+        "authorized_research",
+        "nonproduction_verification"
+      ],
+      "credentialAccess": "NONE_BY_DEFAULT",
+      "financialTransferPermission": false
+    },
+    {
+      "id": "#281213",
+      "role": "ASIA_PACIFIC_API_AUTH_SKIM",
+      "lane": "ASIA_PACIFIC",
+      "regionalMandate": "Asia-Pacific banking",
+      "workerRole": "API_AUTH_SKIM",
+      "source": "144_agent_expansion",
+      "execution_status": "NOT_VERIFIED_RUNNING",
+      "executorBinding": null,
+      "requires_evidence": true,
+      "allowedActions": [
+        "authorized_research",
+        "nonproduction_verification"
+      ],
+      "credentialAccess": "NONE_BY_DEFAULT",
+      "financialTransferPermission": false
+    },
+    {
+      "id": "#281214",
+      "role": "ASIA_PACIFIC_SDK_ENDPOINT_SKIM",
+      "lane": "ASIA_PACIFIC",
+      "regionalMandate": "Asia-Pacific banking",
+      "workerRole": "SDK_ENDPOINT_SKIM",
+      "source": "144_agent_expansion",
+      "execution_status": "NOT_VERIFIED_RUNNING",
+      "executorBinding": null,
+      "requires_evidence": true,
+      "allowedActions": [
+        "authorized_research",
+        "nonproduction_verification"
+      ],
+      "credentialAccess": "NONE_BY_DEFAULT",
+      "financialTransferPermission": false
+    },
+    {
+      "id": "#281215",
+      "role": "ASIA_PACIFIC_SECURITY_PERMISSIONS",
+      "lane": "ASIA_PACIFIC",
+      "regionalMandate": "Asia-Pacific banking",
+      "workerRole": "SECURITY_PERMISSIONS",
+      "source": "144_agent_expansion",
+      "execution_status": "NOT_VERIFIED_RUNNING",
+      "executorBinding": null,
+      "requires_evidence": true,
+      "allowedActions": [
+        "authorized_research",
+        "nonproduction_verification"
+      ],
+      "credentialAccess": "NONE_BY_DEFAULT",
+      "financialTransferPermission": false
+    },
+    {
+      "id": "#281216",
+      "role": "ASIA_PACIFIC_CROSS_CHECK_EVIDENCE",
+      "lane": "ASIA_PACIFIC",
+      "regionalMandate": "Asia-Pacific banking",
+      "workerRole": "CROSS_CHECK_EVIDENCE",
+      "source": "144_agent_expansion",
+      "execution_status": "NOT_VERIFIED_RUNNING",
+      "executorBinding": null,
+      "requires_evidence": true,
+      "allowedActions": [
+        "authorized_research",
+        "nonproduction_verification"
+      ],
+      "credentialAccess": "NONE_BY_DEFAULT",
+      "financialTransferPermission": false
+    },
+    {
+      "id": "#281217",
+      "role": "ASIA_PACIFIC_INTEGRATION_TEST",
+      "lane": "ASIA_PACIFIC",
+      "regionalMandate": "Asia-Pacific banking",
+      "workerRole": "INTEGRATION_TEST",
+      "source": "144_agent_expansion",
+      "execution_status": "NOT_VERIFIED_RUNNING",
+      "executorBinding": null,
+      "requires_evidence": true,
+      "allowedActions": [
+        "authorized_research",
+        "nonproduction_verification"
+      ],
+      "credentialAccess": "NONE_BY_DEFAULT",
+      "financialTransferPermission": false
+    },
+    {
+      "id": "#281218",
+      "role": "GLOBAL_RAILS_DISCOVERY",
+      "lane": "GLOBAL_RAILS",
+      "regionalMandate": "SWIFT / cards / treasury / digital assets",
+      "workerRole": "DISCOVERY",
+      "source": "144_agent_expansion",
+      "execution_status": "NOT_VERIFIED_RUNNING",
+      "executorBinding": null,
+      "requires_evidence": true,
+      "allowedActions": [
+        "authorized_research",
+        "nonproduction_verification"
+      ],
+      "credentialAccess": "NONE_BY_DEFAULT",
+      "financialTransferPermission": false
+    },
+    {
+      "id": "#281219",
+      "role": "GLOBAL_RAILS_API_AUTH_SKIM",
+      "lane": "GLOBAL_RAILS",
+      "regionalMandate": "SWIFT / cards / treasury / digital assets",
+      "workerRole": "API_AUTH_SKIM",
+      "source": "144_agent_expansion",
+      "execution_status": "NOT_VERIFIED_RUNNING",
+      "executorBinding": null,
+      "requires_evidence": true,
+      "allowedActions": [
+        "authorized_research",
+        "nonproduction_verification"
+      ],
+      "credentialAccess": "NONE_BY_DEFAULT",
+      "financialTransferPermission": false
+    },
+    {
+      "id": "#281220",
+      "role": "GLOBAL_RAILS_SDK_ENDPOINT_SKIM",
+      "lane": "GLOBAL_RAILS",
+      "regionalMandate": "SWIFT / cards / treasury / digital assets",
+      "workerRole": "SDK_ENDPOINT_SKIM",
+      "source": "144_agent_expansion",
+      "execution_status": "NOT_VERIFIED_RUNNING",
+      "executorBinding": null,
+      "requires_evidence": true,
+      "allowedActions": [
+        "authorized_research",
+        "nonproduction_verification"
+      ],
+      "credentialAccess": "NONE_BY_DEFAULT",
+      "financialTransferPermission": false
+    },
+    {
+      "id": "#281221",
+      "role": "GLOBAL_RAILS_SECURITY_PERMISSIONS",
+      "lane": "GLOBAL_RAILS",
+      "regionalMandate": "SWIFT / cards / treasury / digital assets",
+      "workerRole": "SECURITY_PERMISSIONS",
+      "source": "144_agent_expansion",
+      "execution_status": "NOT_VERIFIED_RUNNING",
+      "executorBinding": null,
+      "requires_evidence": true,
+      "allowedActions": [
+        "authorized_research",
+        "nonproduction_verification"
+      ],
+      "credentialAccess": "NONE_BY_DEFAULT",
+      "financialTransferPermission": false
+    },
+    {
+      "id": "#281222",
+      "role": "GLOBAL_RAILS_CROSS_CHECK_EVIDENCE",
+      "lane": "GLOBAL_RAILS",
+      "regionalMandate": "SWIFT / cards / treasury / digital assets",
+      "workerRole": "CROSS_CHECK_EVIDENCE",
+      "source": "144_agent_expansion",
+      "execution_status": "NOT_VERIFIED_RUNNING",
+      "executorBinding": null,
+      "requires_evidence": true,
+      "allowedActions": [
+        "authorized_research",
+        "nonproduction_verification"
+      ],
+      "credentialAccess": "NONE_BY_DEFAULT",
+      "financialTransferPermission": false
+    },
+    {
+      "id": "#281223",
+      "role": "GLOBAL_RAILS_INTEGRATION_TEST",
+      "lane": "GLOBAL_RAILS",
+      "regionalMandate": "SWIFT / cards / treasury / digital assets",
+      "workerRole": "INTEGRATION_TEST",
+      "source": "144_agent_expansion",
+      "execution_status": "NOT_VERIFIED_RUNNING",
+      "executorBinding": null,
+      "requires_evidence": true,
+      "allowedActions": [
+        "authorized_research",
+        "nonproduction_verification"
+      ],
+      "credentialAccess": "NONE_BY_DEFAULT",
+      "financialTransferPermission": false
+    }
+  ]
+}
