@@ -1,0 +1,24 @@
+name: KINO 144 Agent Research Engine CI
+on:
+  push:
+    paths:
+      - 'agent-system/**'
+      - '.github/workflows/kino-research-engine-ci.yml'
+  pull_request:
+    paths:
+      - 'agent-system/**'
+      - '.github/workflows/kino-research-engine-ci.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  test-agent-system:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Validate registered agent research code without API credentials
+        run: node --test agent-system/*.test.mjs
