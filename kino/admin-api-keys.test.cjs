@@ -1,0 +1,13 @@
+'use strict';
+const test=require('node:test'),assert=require('node:assert/strict');
+const {issueKey,authorize,publicRecord}=require('./admin-api-keys.cjs');
+const now=Date.parse('2026-10-11T00:00:00Z'),expiresAt='2026-10-12T00:00:00Z';
+const make=()=>issueKey({owner:'kino-admin',scopes:['research:read'],expiresAt,now});
+test('issues scoped key with hashed storage',()=>{const {secret,record}=make();assert.match(secret,/^kino_/);assert.ok(record.hash);assert.equal(record.secret,undefined)});
+test('correct secret and scope authorize',()=>{const {secret,record}=make();assert.equal(authorize({secret,record,scope:'research:read',now}),true)});
+test('wrong secret fails',()=>{const {record}=make();assert.equal(authorize({secret:'kino_invalid',record,scope:'research:read',now}),false)});
+test('ungranted scope fails',()=>{const {secret,record}=make();assert.equal(authorize({secret,record,scope:'assets:propose',now}),false)});
+test('revoked key fails',()=>{const {secret,record}=make();record.revokedAt='2026-10-11T01:00:00Z';assert.equal(authorize({secret,record,scope:'research:read',now}),false)});
+test('expired key fails',()=>{const {secret,record}=make();assert.equal(authorize({secret,record,scope:'research:read',now:Date.parse(expiresAt)}),false)});
+test('rejects invalid scopes and long-lived keys',()=>{assert.throws(()=>issueKey({owner:'x',scopes:['weapons:write'],expiresAt,now}),/scopes/);assert.throws(()=>issueKey({owner:'x',scopes:['research:read'],expiresAt:'2027-10-11',now}),/90 days/)});
+test('public metadata excludes hash and salt',()=>{const {record}=make();const pub=publicRecord(record);assert.equal(pub.hash,undefined);assert.equal(pub.salt,undefined)});
