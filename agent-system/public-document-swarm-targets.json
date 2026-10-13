@@ -1,0 +1,18 @@
+{
+  "schemaVersion":"1.0.0",
+  "mode":"PUBLIC_DOCUMENT_RESEARCH_ONLY",
+  "productionBankingEnabled":false,
+  "hostedAgentClaims":false,
+  "scope":"Eight selected official documentation targets; preserve all 19 logical lanes and the existing global banking inventory, this subset is not worldwide coverage",
+  "allowedHosts":["developer.citi.com","developer.db.com","developer.gs.com","docs.wise.com","www.bcb.gov.br","www.frbservices.org","www.swift.com","open.icbc.com.cn"],
+  "jobs":[
+    {"id":"kino07-fednow-public-api","lane":"US_CANADA","provider":"Federal Reserve FedNow developer API reference","url":"https://www.frbservices.org/fedline-solutions/fedline-developer/fednow-apis/"},
+    {"id":"kino07-citi-auth-doc","lane":"US_CANADA","provider":"Citi developer authorization guide","url":"https://developer.citi.com/apidocs/"},
+    {"id":"kino07-deutsche-psd2","lane":"EUROPE","provider":"Deutsche Bank PSD2 API developer requirements","url":"https://developer.db.com/products/psd2"},
+    {"id":"kino07-goldman-txb","lane":"US_CANADA","provider":"Goldman Sachs TxB authentication","url":"https://developer.gs.com/docs/services/transaction-banking/auth-connection/"},
+    {"id":"kino07-wise-partner","lane":"EUROPE","provider":"Wise Platform OAuth partner access","url":"https://docs.wise.com/guides/developer/auth-and-security"},
+    {"id":"kino07-pix-participation","lane":"BRAZIL","provider":"Banco Central do Brasil Pix participants","url":"https://www.bcb.gov.br/en/financialstability/pixparticipants"},
+    {"id":"kino07-swift-apis","lane":"GLOBAL_RAILS","provider":"Swift APIs and SDK developer access","url":"https://www.swift.com/products/swift-apis"},
+    {"id":"kino07-icbc-europe","lane":"CHINA","provider":"ICBC Europe developer onboarding","url":"https://open.icbc.com.cn/icbc/apip/europe/index.html"}
+  ]
+}
