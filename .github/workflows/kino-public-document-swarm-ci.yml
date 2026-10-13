@@ -1,0 +1,37 @@
+name: KINO PUBLIC BANKING SWARM Real Document Verification
+on:
+  push:
+    paths:
+      - 'agent-system/public-document-swarm.mjs'
+      - 'agent-system/public-document-swarm.test.mjs'
+      - 'agent-system/public-document-swarm-targets.json'
+      - '.github/workflows/kino-public-document-swarm-ci.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  public-research:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Test fail-closed public-source researcher without credentials
+        run: node --test agent-system/public-document-swarm.test.mjs
+      - name: Run real HTTPS GET research across approved official provider sites
+        run: |
+          node agent-system/public-document-swarm.mjs \
+            agent-system/sonoraport-144-agent-roster.json \
+            agent-system/public-document-swarm-targets.json \
+            "$RUNNER_TEMP/kino-public-swim-receipts.json" \
+            --fetch-approved-public-docs
+      - name: Upload non-sensitive source hash and research receipts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: kino-public-swarm-research-receipts
+          retention-days: 14
+          if-no-files-found: warn
+          path: ${{ runner.temp }}/kino-public-swim-receipts.json
