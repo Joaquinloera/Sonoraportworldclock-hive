@@ -18,7 +18,7 @@ const SIGNALS=Object.freeze({
  CROSS_CHECK_EVIDENCE:['documentation','rule','guide','requirements','policy','developer','participant'],
  INTEGRATION_TEST:['sandbox','test environment','simulation','testing','certification']
 });
-const LIMIT_BYTES=240_000;
+const LIMIT_BYTES=1_500_000;
 const HOST_RE=/^[a-z0-9]+(?:[.-][a-z0-9]+)+$/;
 const SAFE_ID=/^[a-z0-9._:-]{2,110}$/i;
 const BAD_URL_KEYS=/token|key|secret|password|auth|credential|session|signature/i;
