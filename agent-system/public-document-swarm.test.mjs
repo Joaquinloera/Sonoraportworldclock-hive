@@ -41,7 +41,7 @@ test('handles HTTP errors and unsupported media types as failed document receipt
  assert.equal(r.officialDocumentReceipts[1].reason,'OFFICIAL_SOURCE_HTTP_ERROR');
 });
 test('rejects oversize and empty pages without treating them as verification',async()=>{
- const r=await runPublicDocumentSwarm({roster,manifest,fetchImpl:async()=>({ok:true,headers:{get:()=> 'text/html'},text:async()=> 'A'.repeat(240100)})});
+ const r=await runPublicDocumentSwarm({roster,manifest,fetchImpl:async()=>({ok:true,headers:{get:()=> 'text/html'},text:async()=> 'A'.repeat(1_500_100)})});
  assert.equal(r.documentsFetched,0);assert.equal(r.officialDocumentReceipts[0].reason,'DOCUMENT_OVERSIZE');
 });
 test('limits worker concurrency and rejects unbounded retries',async()=>{
