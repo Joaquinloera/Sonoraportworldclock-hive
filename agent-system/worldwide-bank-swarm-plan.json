@@ -1,0 +1,51 @@
+{
+  "version": 1,
+  "purpose": "Concurrent global bank registry discovery and per-institution technical SKIM",
+  "status": "CONFIGURED_NOT_EXECUTED",
+  "frameworkCandidates": [
+    "LangGraph",
+    "CrewAI",
+    "OpenAI Agents SDK",
+    "Microsoft Agent Framework"
+  ],
+  "existingSupervisor": "agent-system/research-fleet-supervisor.mjs",
+  "workerLimit": 8,
+  "coverage": "All countries and territories with banking regulators; no fixed small bank list",
+  "stages": [
+    "discover official regulator registers",
+    "enumerate each individual licensed bank",
+    "deduplicate with regulator identifiers",
+    "locate official developer documentation",
+    "extract endpoints auth OAuth mTLS SDK webhook sandbox production permissions",
+    "classify payment rails and blockchain integration",
+    "cross-check official sources",
+    "persist evidence with timestamp and access status"
+  ],
+  "outputSchema": {
+    "country": "ISO 3166-1 alpha-2",
+    "bankName": "legal name",
+    "regulator": "official regulator",
+    "licenseId": "if published",
+    "apiDocs": "official URL if published",
+    "authMethods": [],
+    "sdk": [],
+    "webhooks": [],
+    "sandbox": "verified/unverified/unavailable",
+    "blockchain": "verified/unverified/not applicable",
+    "sourceUrls": [],
+    "verifiedAt": "ISO timestamp",
+    "connectionStatus": "UNVERIFIED"
+  },
+  "security": {
+    "noCredentialHarvesting": true,
+    "noSecretStorage": true,
+    "noUnauthorizedBankAccess": true
+  },
+  "sourceFrameworks": [
+    "https://langchain-ai.github.io/langgraph/",
+    "https://www.langchain.com/resources/ai-agent-frameworks"
+  ],
+  "sourceBanking": [
+    "https://www.bis.org/about/organisation/members"
+  ]
+}
