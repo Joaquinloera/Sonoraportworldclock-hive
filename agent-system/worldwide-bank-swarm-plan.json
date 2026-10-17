@@ -47,5 +47,25 @@
   ],
   "sourceBanking": [
     "https://www.bis.org/about/organisation/members"
-  ]
+  ],
+  "execution": {
+    "runner": "agent-system/research-fleet-supervisor.mjs",
+    "queue": "agent-system/supabase-job-store.mjs",
+    "jobRunner": "agent-system/run-queued-official-doc-research.mjs",
+    "requires": [
+      "SONORAPORT_RESEARCH_STAGING_APPROVED=true",
+      "SONORAPORT_SUPABASE_URL",
+      "SUPABASE_SERVICE_ROLE_KEY",
+      "TINYFISH_API_KEY",
+      "approved 144-agent roster",
+      "validated 19-lane manifest",
+      "populated Supabase research queue"
+    ],
+    "command": "node agent-system/research-fleet-supervisor.mjs <roster.json> <manifest.json> --execute-bounded-research",
+    "defaultWorkers": 4,
+    "maximumWorkers": 8,
+    "maxClaimsPerInvocation": 18,
+    "continuousExecution": false,
+    "executionVerified": false
+  }
 }
