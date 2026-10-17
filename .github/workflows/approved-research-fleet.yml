@@ -35,4 +35,4 @@ jobs:
       - name: Execute existing bounded approved research queue
         shell: bash
         run: |
-          node agent-system/research-fleet-supervisor.mjs agent-system/roster.json agent-system/approved-research-manifest.json --execute-bounded-research
+          node agent-system/research-fleet-supervisor.mjs agent-system/sonoraport-144-agent-roster.json agent-system/approved-research-manifest.json --execute-bounded-research
