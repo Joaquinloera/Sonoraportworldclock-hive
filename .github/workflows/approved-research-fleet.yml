@@ -1,0 +1,38 @@
+name: SonoraPort approved research fleet
+on:
+  schedule:
+    - cron: '17 */2 * * *'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: sonoraport-approved-research-fleet
+  cancel-in-progress: false
+jobs:
+  research:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    environment: research-staging
+    env:
+      SONORAPORT_RESEARCH_STAGING_APPROVED: ${{ vars.SONORAPORT_RESEARCH_STAGING_APPROVED }}
+      SONORAPORT_SUPABASE_URL: ${{ secrets.SONORAPORT_SUPABASE_URL }}
+      SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+      TINYFISH_API_KEY: ${{ secrets.TINYFISH_API_KEY }}
+      KINO_WORKER_COUNT: '4'
+      KINO_MAX_CLAIMS: '18'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Guard against unapproved or unconfigured execution
+        shell: bash
+        run: |
+          test "$SONORAPORT_RESEARCH_STAGING_APPROVED" = true
+          test -n "$SONORAPORT_SUPABASE_URL"
+          test -n "$SUPABASE_SERVICE_ROLE_KEY"
+          test -n "$TINYFISH_API_KEY"
+      - name: Execute existing bounded approved research queue
+        shell: bash
+        run: |
+          node agent-system/research-fleet-supervisor.mjs agent-system/roster.json agent-system/approved-research-manifest.json --execute-bounded-research
