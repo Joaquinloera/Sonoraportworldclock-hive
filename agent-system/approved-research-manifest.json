@@ -1,0 +1,98 @@
+{
+  "allowedHosts": [
+    "www.cips.com.cn"
+  ],
+  "jobs": [
+    {
+      "id": "official-china-20261012",
+      "lane": "CHINA",
+      "provider": "CIPS",
+      "sourceUrls": [
+        "https://www.cips.com.cn/kjjqgsyyingw/2025-12/10/article_2025121011242061513.shtml",
+        "https://www.cips.com.cn/kjjqgsyyingw/2025-12/11/article_2025121115151515220.shtml"
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "lane": "CHINA",
+      "sourceVerificationStatus": "TWO_OFFICIAL_DOCS_FETCHED",
+      "sourceUrls": [
+        "https://www.cips.com.cn/kjjqgsyyingw/2025-12/10/article_2025121011242061513.shtml",
+        "https://www.cips.com.cn/kjjqgsyyingw/2025-12/11/article_2025121115151515220.shtml"
+      ]
+    },
+    {
+      "lane": "INDIA",
+      "sourceVerificationStatus": "OFFICIAL_DOCS_RESEARCH_PENDING"
+    },
+    {
+      "lane": "BRAZIL",
+      "sourceVerificationStatus": "OFFICIAL_DOCS_RESEARCH_PENDING"
+    },
+    {
+      "lane": "RUSSIA",
+      "sourceVerificationStatus": "OFFICIAL_DOCS_RESEARCH_PENDING"
+    },
+    {
+      "lane": "SOUTH_AFRICA",
+      "sourceVerificationStatus": "OFFICIAL_DOCS_RESEARCH_PENDING"
+    },
+    {
+      "lane": "EGYPT",
+      "sourceVerificationStatus": "OFFICIAL_DOCS_RESEARCH_PENDING"
+    },
+    {
+      "lane": "ETHIOPIA",
+      "sourceVerificationStatus": "OFFICIAL_DOCS_RESEARCH_PENDING"
+    },
+    {
+      "lane": "IRAN",
+      "sourceVerificationStatus": "OFFICIAL_DOCS_RESEARCH_PENDING"
+    },
+    {
+      "lane": "UAE",
+      "sourceVerificationStatus": "OFFICIAL_DOCS_RESEARCH_PENDING"
+    },
+    {
+      "lane": "SAUDI_ARABIA",
+      "sourceVerificationStatus": "OFFICIAL_DOCS_RESEARCH_PENDING"
+    },
+    {
+      "lane": "INDONESIA",
+      "sourceVerificationStatus": "OFFICIAL_DOCS_RESEARCH_PENDING"
+    },
+    {
+      "lane": "US_CANADA",
+      "sourceVerificationStatus": "OFFICIAL_DOCS_RESEARCH_PENDING"
+    },
+    {
+      "lane": "MEXICO",
+      "sourceVerificationStatus": "OFFICIAL_DOCS_RESEARCH_PENDING"
+    },
+    {
+      "lane": "SOUTH_AMERICA",
+      "sourceVerificationStatus": "OFFICIAL_DOCS_RESEARCH_PENDING"
+    },
+    {
+      "lane": "CARIBBEAN",
+      "sourceVerificationStatus": "OFFICIAL_DOCS_RESEARCH_PENDING"
+    },
+    {
+      "lane": "EUROPE",
+      "sourceVerificationStatus": "OFFICIAL_DOCS_RESEARCH_PENDING"
+    },
+    {
+      "lane": "AFRICA_OTHER",
+      "sourceVerificationStatus": "OFFICIAL_DOCS_RESEARCH_PENDING"
+    },
+    {
+      "lane": "ASIA_PACIFIC",
+      "sourceVerificationStatus": "OFFICIAL_DOCS_RESEARCH_PENDING"
+    },
+    {
+      "lane": "GLOBAL_RAILS",
+      "sourceVerificationStatus": "OFFICIAL_DOCS_RESEARCH_PENDING"
+    }
+  ]
+}
